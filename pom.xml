@@ -7,9 +7,14 @@
     <artifactId>hfwas-blog</artifactId>
     <version>1.0.0</version>
     <name>hfwas-blog</name>
+    <packaging>pom</packaging>
 
     <description>hfwas-博客</description>
-    <packaging>pom</packaging>
+    <modules>
+        <module>hfwas-doc</module>
+        <module>hfwas-common</module>
+    </modules>
+
 
     <!--项目子模块-->
 
