@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @TableName(value = "hfwas-user")
 public class BlogUser {
+
     private Integer id;
     private String username;
     private String real_name;
