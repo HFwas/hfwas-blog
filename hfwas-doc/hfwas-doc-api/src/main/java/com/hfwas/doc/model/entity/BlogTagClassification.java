@@ -1,5 +1,8 @@
 package com.hfwas.doc.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,17 +18,29 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @TableName(value = "hfwas_tag_classification")
 public class BlogTagClassification {
-    private Integer id;
+    @TableId(type = IdType.AUTO)
+    private Long id;
+    @TableField(value = "name")
     private String name;
-    private Integer sortId;
+    @TableField(value = "sort")
+    private Integer sort;
+    @TableField(value = "description")
     private String description;
+    @TableField(value = "status")
     private Integer status;
+    @TableField(value = "create_by")
     private String createBy;
+    @TableField(value = "create_time")
     private LocalDateTime createTime;
+    @TableField(value = "update_by")
     private String updateBy;
+    @TableField(value = "update_time")
     private LocalDateTime updateTime;
+    @TableField(value = "")
     private Integer version;
+    @TableField(value = "isDeleted")
     private Integer isDeleted;
+    @TableField(value = "code")
     private String code;
 
 }
