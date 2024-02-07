@@ -21,11 +21,11 @@ public class BlogComment {
     @TableId(type = IdType.AUTO)
     private Long id;
     @TableField(value = "doc_id")
-    private Integer docId;
+    private Long   docId;
     @TableField(value = "content")
     private String content;
     @TableField(value = "parent_id")
-    private Integer parentId;
+    private Long   parentId;
     @TableField(value = "create_id")
     private String createBy;
     @TableField(value = "create_time")

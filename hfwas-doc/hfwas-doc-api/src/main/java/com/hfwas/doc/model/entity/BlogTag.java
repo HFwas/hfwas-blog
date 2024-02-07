@@ -21,11 +21,11 @@ public class BlogTag {
     @TableId(type = IdType.AUTO)
     private Long id;
     @TableField(value = "classification_id")
-    private Integer classificationId;
+    private Long classificationId;
     @TableField(value = "name")
     private String name;
     @TableField(value = "sort_id")
-    private Integer sortId;
+    private Long sortId;
     @TableField(value = "description")
     private String description;
     @TableField(value = "status")

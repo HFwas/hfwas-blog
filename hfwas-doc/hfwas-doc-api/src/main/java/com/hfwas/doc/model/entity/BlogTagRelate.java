@@ -19,9 +19,9 @@ public class BlogTagRelate {
     @TableId(type = IdType.AUTO)
     private Long id;
     @TableField(value = "tagId")
-    private Integer tagId;
+    private Long tagId;
     @TableField(value = "relateTypeCode")
     private String relateTypeCode;
     @TableField(value = "relateInstanceId")
-    private Integer relateInstanceId;
+    private Long relateInstanceId;
 }

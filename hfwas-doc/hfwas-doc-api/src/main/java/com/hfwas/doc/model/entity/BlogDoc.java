@@ -39,7 +39,7 @@ public class BlogDoc {
     @TableField(value = "author")
     private String author;
     @TableField(value = "source")
-    private String source;
+    private Integer source;
     @TableField(value = "publich")
     private Integer publich;
     @TableField(value = "sort")
