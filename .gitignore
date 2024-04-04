@@ -1,25 +1,16 @@
-# Temp files
-.cache/
-.temp/
-
-# Dist files
-dist/
-lib/
-
-# Test coverage files
-coverage/
-
-# Node modules
-node_modules/
-
-# MacOS Desktop Services Store
+node_modules
+.cache
+.temp
+package-lock.json
+yarn.lock
 .DS_Store
-
-# Log files
+dump.rdb
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
+images
 *.log
-
-# Typescript build info
-*.tsbuildinfo
-
-# npm config file
-.npmrc
+package.json
+.yarn
+*-vip.md
+/src/.vuepress/dist/
+dist

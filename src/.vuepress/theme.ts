@@ -15,7 +15,7 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "HFwas/hfwas-blog",
 
   docsDir: "src",
 
@@ -26,7 +26,7 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "京ICP备2023006845号-2",
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023006845号-2</a>',
   displayFooter: true,
 
   // 博客相关
@@ -44,7 +44,7 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
+      "/demo/encrypt.html": ["123467"],
     },
   },
 
@@ -54,7 +54,7 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
+  hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {

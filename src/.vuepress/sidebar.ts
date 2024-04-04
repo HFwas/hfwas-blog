@@ -11,6 +11,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "编程语言",
+      icon: "laptop-code",
+      prefix: "demo2/",
+      link: "demo2/",
+      children: "structure",
+    },
+    {
       text: "文章",
       icon: "book",
       prefix: "posts/",
