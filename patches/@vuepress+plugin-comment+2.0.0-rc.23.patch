@@ -1,0 +1,13 @@
+diff --git a/node_modules/@vuepress/plugin-comment/lib/client/pageview.js b/node_modules/@vuepress/plugin-comment/lib/client/pageview.js
+index aa8d4a6..c4389ea 100644
+--- a/node_modules/@vuepress/plugin-comment/lib/client/pageview.js
++++ b/node_modules/@vuepress/plugin-comment/lib/client/pageview.js
+@@ -3,7 +3,7 @@ export const updatePageview = async () => {
+     const commentOptions = useWalineOptions();
+     try {
+         const { pageviewCount } = await import(
+-        /* webpackMode: "week" */ /* webpackChunkName: "pageview" */ '@waline/client/pageview');
++        /* webpackMode: "weak" */ /* webpackChunkName: "pageview" */ '@waline/client/pageview');
+         return pageviewCount({ serverURL: commentOptions.serverURL });
+     }
+     catch (err) {
