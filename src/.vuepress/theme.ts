@@ -15,7 +15,7 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "HFwas/hfwas-blog",
+  repo: "https://github.com/HFwas/hfwas-blog",
 
   docsDir: "src",
 
@@ -64,11 +64,15 @@ export default hopeTheme({
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
     comment: {
       provider: "Waline",
-      serverURL: "https://waline-comment.vuejs.press",
+      serverURL: "https://waline-flame-nine.vercel.app",
+      // 评论者相关属性
+      meta: ['nick', 'mail'],
+      // 设置必填项，邮箱选填，账号名称必填
+      requiredMeta: ['nick'],
     },
 
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard", "SiteInfo"],
     },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
