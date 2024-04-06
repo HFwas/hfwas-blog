@@ -4,11 +4,11 @@ import sidebar from "./sidebar.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
-  hostname: "https://hfwas.tech",
+  hostname: "https://www.hfwas.tech",
 
   author: {
     name: "HFwas",
-    url: "https://hfwas.tech",
+    url: "https://www.hfwas.tech",
   },
 
   iconAssets: "fontawesome-with-brands",
