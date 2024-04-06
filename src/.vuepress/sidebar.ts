@@ -11,10 +11,10 @@ export default sidebar({
       children: "structure",
     },
     {
-      text: "编程语言",
+      text: "运维知识",
       icon: "laptop-code",
-      prefix: "demo2/",
-      link: "demo2/",
+      prefix: "yw/",
+      link: "yw/",
       children: "structure",
     },
     {
@@ -23,11 +23,13 @@ export default sidebar({
       prefix: "posts/",
       children: "structure",
     },
-    "intro",
     {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
+      text: "其他",
+      icon: "laptop-code",
+      prefix: "other/",
+      link: "other/",
+      children: "structure",
     },
+    "intro",
   ],
 });

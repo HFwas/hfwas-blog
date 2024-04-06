@@ -6,47 +6,37 @@ export default navbar([
   {
     text: "运维知识",
     icon: "pen-to-square",
-    prefix: "/demo2/",
+    prefix: "/yw/",
     children: [
       {
         text: "Linux",
         icon: "pen-to-square",
-        prefix: "00-linux/1",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-        ]
+        prefix: "00-linux/",
+        link: "00-linux/index"
       },
       {
         text: "Shell",
         icon: "pen-to-square",
         prefix: "01-shell/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-        ]
+        link: "01-shell/index",
       },
       {
         text: "Docker",
         icon: "pen-to-square",
         prefix: "02-docker/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-        ]
+        link: "02-docker/index",
       },
       {
         text: "K8s",
         icon: "pen-to-square",
         prefix: "03-k8s/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-        ]
+        link: "03-k8s/index",
       },
       {
         text: "Ansible",
         icon: "pen-to-square",
         prefix: "04-ansible/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-        ]
+        link: "04-ansible/index",
       },
     ]
   },
@@ -62,38 +52,39 @@ export default navbar([
         children: [
           { text: "苹果1", icon: "pen-to-square", link: "1" },
           { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
         ],
-      },
-      {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
-        children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
-        ],
-      },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
+      }
     ],
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "其他",
+    icon: "pen-to-square",
+    prefix: "/other/",
+    children: [
+      {
+        text: "博客",
+        icon: "pen-to-square",
+        prefix: "blog/",
+        link: "blog/index"
+      },
+      {
+        text: "友情链接",
+        icon: "pen-to-square",
+        prefix: "friends/",
+        link: "friends/site",
+      },
+      {
+        text: "工具集",
+        icon: "pen-to-square",
+        prefix: "tools/",
+        link: "tools/overriew",
+      },
+      {
+        text: "软件安装",
+        icon: "pen-to-square",
+        prefix: "softerware/",
+        link: "softerware/index",
+      },
+    ]
   },
 ]);
