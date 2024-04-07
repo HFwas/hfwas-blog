@@ -4,15 +4,15 @@
 - jinja2语言，使用字面量，有下面形式
   - 字符串：使用单引号或双引号
   - 数字：整数，浮点数
-  - 列表：[item1,item2,]
-  - 元组：(item1,item2,)
-  - 字典：{key1:value1,key2:value2,…}
-  - 布尔型：true/false
+  - 列表：`[item1,item2,]`
+  - 元组：`(item1,item2,)`
+  - 字典：`{key1:value1,key2:value2,…}`
+  - 布尔型：`true/false`
 
-- 算术运算：+，- ，*，/，//，%，**
-- 比较操作：==，!=，>，>=，<，<=
-- 逻辑运算：and,or,not
-- 流表达式：For If When
+- 算术运算：`+，- ，*，/，//，%，**`
+- 比较操作：`==，!=，>，>=，<，<=`
+- 逻辑运算：`and,or,not`
+- 流表达式：`For If When`
 
 ## templates功能
 
@@ -22,7 +22,7 @@
     - ./
     - temptyl
     - templates
-    - L—nginx.conf.j2
+    - nginx.conf.j2
 
 
 - 示例：利用templates同步nginxi配置文件，准备templates/nginx.conf.j2文件
