@@ -24,3 +24,7 @@ star: true
 
 - 再次访问前端页面，没有问题了
 - 问题解决！
+
+## 参考资料
+
+- GitHub [discussion](https://github.com/vuepress/core/discussions/103) 
