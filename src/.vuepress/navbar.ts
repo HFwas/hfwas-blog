@@ -54,7 +54,7 @@ export default navbar([
       {
         text: "友情链接",
         icon: "pen-to-square",
-        prefix: "friends/",
+        // prefix: "friends/",
         link: "friends/site",
       },
       {

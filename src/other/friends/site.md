@@ -1,5 +1,6 @@
 ---
 icon: pen-to-square
+title: 友情链接
 date: 2024-04-04
 ---
 # 友情链接
