@@ -14,6 +14,7 @@ export default defineUserConfig({
       ['meta', {name: '360-site-verification', content: 'bb63045cb42977fa44dba977f095a42f'}],
       ['meta', {name: 'msvalidate.01', content: '8F660B701AFF402CFE968D8155346E6A'}],
       ['meta', {name: "google-site-verification",content: "haDC5Fd6-XOF14hosBI6MvUXfI6ajLC68Dvct3IE3zU"}],
+      ['meta', {name: "shenma-site-verification",content: "a4e0e8bad88fecd4d32ea538856fcc98_1712766118"}],
       ['script', {}, `var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
