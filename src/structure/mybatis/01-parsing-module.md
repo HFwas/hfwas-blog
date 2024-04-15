@@ -1,6 +1,13 @@
+---
+icon: pen-to-square
+date: 2024-04-15
+category:
+  - mybatis
+tag:
+  - mybatis
+---
 
-
-# 解析模块
+# Mybatis-解析模块
 
 - 主要负责解析mybatis当中的myabtis-config.xml文件，封装了java底层提供的xpath模块，提供了自己的解析方法
 - 处理配置文件当中的动态sql提供支持

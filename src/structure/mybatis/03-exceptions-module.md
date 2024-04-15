@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-15
+category:
+  - mybatis
+tag:
+  - mybatis
+---
 # Mybatis-异常模块
 
 ## 代码结构
