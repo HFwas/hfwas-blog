@@ -5,8 +5,6 @@ cover: /assets/images/cover3.jpg
 
 # 关于我
 
-西安工程大学，目前在职杭州谐云科技有限公司
-
 ## 介绍
 
 - 担得起完整的后端开发工作，也能搞点前端开发，也积极学习前沿技术
@@ -89,10 +87,6 @@ cover: /assets/images/cover3.jpg
 
 - 熟练使用MySql，了解MySql的索引和常见知识
 - 熟练使用Redis，
-
-## 教育经历
-
-西安工程大学     2016-09 ～ 2023-07      ～ 本科 ～ 计算机科学与技术
 
 ## 其他链接
 - 博客：[http://www.hfwas.tech/](http://www.hfwas.tech/)
