@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - nexus
+tag:
+  - nexus
+---
 # Nexus操作-下载前端yarn-resoluted依赖
 
 - 前端依赖管理工具如果是通过yarn来管理，执行yarn install会生成一个文件，文件名称为：yarn.lock文件，

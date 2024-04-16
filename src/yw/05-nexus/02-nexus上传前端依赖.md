@@ -1,4 +1,12 @@
-- # Nexus操作-上传前端依赖
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - nexus
+tag:
+  - nexus
+---
+# Nexus操作-上传前端依赖
 
   - 前端支持三种依赖库，包括三种，分别是hosted , proxy , group类型。
   - 本篇文章完全基于内网环境下，和互联网无法联通的环境下去处理。

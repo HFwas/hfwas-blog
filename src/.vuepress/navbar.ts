@@ -38,6 +38,12 @@ export default navbar([
         prefix: "04-ansible/",
         link: "04-ansible/index",
       },
+      {
+        text: "Nexus",
+        icon: "pen-to-square",
+        prefix: "05-nexus/",
+        link: "05-nexus/index",
+      },
     ]
   },
   {

@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - nexus
+tag:
+  - nexus
+---
 # Nexus操作-Nexus下载前端npm依赖
 
 - 此脚本是为了方便开发人员运维人员下载前端n p m依赖而编写使用，因为是自己在项目使用，所以分享出来

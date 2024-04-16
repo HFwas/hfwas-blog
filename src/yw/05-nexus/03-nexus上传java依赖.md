@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - nexus
+tag:
+  - nexus
+---
 # Nexus操作-Nexus上传java依赖
 
 - nexus支持的Java依赖库有三种，包括group, hosted, proxy三种。
