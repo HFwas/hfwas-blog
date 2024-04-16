@@ -41,6 +41,19 @@ export default navbar([
     ]
   },
   {
+    text: "Java框架",
+    icon: "pen-to-square",
+    prefix: "/structure/",
+    children: [
+      {
+        text: "Mybatis",
+        icon: "pen-to-square",
+        prefix: "mybatis/",
+        link: "mybatis/00-basic"
+      },
+    ]
+  },
+  {
     text: "其他",
     icon: "pen-to-square",
     prefix: "/other/",
