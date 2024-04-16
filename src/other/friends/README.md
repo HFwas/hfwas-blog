@@ -1,8 +1,5 @@
 ---
-title: 软件安装
+title: 友链
 index: false
 icon: laptop-code
 ---
-
-
-

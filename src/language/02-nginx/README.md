@@ -1,8 +1,6 @@
 ---
-title: 软件安装
+title: 前端
 index: false
 icon: laptop-code
 ---
-
-
 

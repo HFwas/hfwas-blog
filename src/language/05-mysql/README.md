@@ -1,8 +1,5 @@
 ---
-title: 软件安装
+title: Mysql
 index: false
 icon: laptop-code
 ---
-
-
-

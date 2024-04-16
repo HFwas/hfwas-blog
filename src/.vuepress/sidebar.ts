@@ -17,6 +17,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "语言知识",
+      icon: "book",
+      prefix: "language/",
+      link: "language/",
+      children: "structure",
+    },
+    {
       text: "其他",
       icon: "laptop-code",
       prefix: "other/",

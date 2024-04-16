@@ -2,7 +2,6 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  // "/demo/",
   {
     text: "运维知识",
     icon: "pen-to-square",
@@ -56,6 +55,31 @@ export default navbar([
         icon: "pen-to-square",
         prefix: "mybatis/",
         link: "mybatis/00-basic"
+      },
+    ]
+  },
+  {
+    text: "语言知识",
+    icon: "pen-to-square",
+    prefix: "/language/",
+    children: [
+      {
+        text: "前端",
+        icon: "pen-to-square",
+        prefix: "01-fronted/",
+        link: "01-fronted/00-打补丁解决前端bug"
+      },
+      {
+        text: "Nginx",
+        icon: "pen-to-square",
+        prefix: "02-nginx/",
+        link: "02-nginx/00-nginx-https"
+      },
+      {
+        text: "MySql",
+        icon: "pen-to-square",
+        prefix: "05-mysql/",
+        link: "05-mysql/01_基础查询"
       },
     ]
   },
