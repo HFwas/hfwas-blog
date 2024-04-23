@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-23
+category:
+  - k8s
+tag:
+  - k8s
+---
 # K8s基础知识-核心技术Helm
 
 Helm就是一个包管理工具【类似于npm】
