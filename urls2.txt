@@ -1,13 +1,3 @@
-https://www.hfwas.tech/structure/mybatis/00-basic.html
-https://www.hfwas.tech/structure/mybatis/01-parsing-module.html
-https://www.hfwas.tech/structure/mybatis/02-reflection-module.html
-https://www.hfwas.tech/structure/mybatis/03-exceptions-module.html
-https://www.hfwas.tech/structure/mybatis/04-datasource-module.html
-https://www.hfwas.tech/other/softerware/20220312-homebrew%E5%AE%89%E8%A3%85openresty.html
-https://www.hfwas.tech/other/softerware/20220312-homebrew%E5%AE%89%E8%A3%85telnet.html
-https://www.hfwas.tech/other/softerware/20220312-homwbrew%E5%AE%89%E8%A3%85lua.html
-https://www.hfwas.tech/other/softerware/20220329-%E5%86%85%E7%BD%91%E5%AE%89%E8%A3%85docker%E7%8E%AF%E5%A2%83.html
-https://www.hfwas.tech/other/softerware/20220821-%E5%A4%96%E7%BD%91%E5%AE%89%E8%A3%85docker.html
 https://www.hfwas.tech/other/softerware/20220824-m1%E5%AE%89%E8%A3%85nacocs.html
 https://www.hfwas.tech/other/softerware/20220828-linux%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8.html
 https://www.hfwas.tech/other/softerware/20220828-linux%E5%AE%89%E8%A3%85git.html
