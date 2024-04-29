@@ -1,8 +1,2 @@
-https://www.hfwas.tech/other/softerware/20220824-m1%E5%AE%89%E8%A3%85nacocs.html
-https://www.hfwas.tech/other/softerware/20220828-linux%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8.html
-https://www.hfwas.tech/other/softerware/20220828-linux%E5%AE%89%E8%A3%85git.html
-https://www.hfwas.tech/other/softerware/20231103-linuxdocker%E5%AE%89%E8%A3%85jenkins.html
-https://www.hfwas.tech/other/softerware/20231103-linuxdocker%E5%AE%89%E8%A3%85nexus.html
-https://www.hfwas.tech/other/softerware/20240311-xshell%E5%92%8Cxftp.html
-https://www.hfwas.tech/other/tools/overriew.html
+
 
