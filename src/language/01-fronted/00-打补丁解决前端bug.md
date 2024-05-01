@@ -11,7 +11,7 @@ tag:
   - path-package
 ---
 
-# 打补丁解决前端bug
+# 前端-打补丁解决前端bug
 
 - 安装依赖 patch-package，执行` npm i -D patch-package`
 

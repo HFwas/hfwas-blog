@@ -10,9 +10,10 @@ tag:
 star: true
 ---
 
-# nginx配置https
+# Nginx-nginx配置https
 
-- 提前准备好后缀名称为pem和key的文件，上传到服务器nginx对应目录下，我这边新建了一个cert文件夹放置
+- 提前准备好后缀名称为pem和key的文件，
+- 上传到服务器nginx对应目录下，我这边新建了一个cert文件夹放置
 
 ![image-20240404152301042](images/image-20240404152301042.png)
 

@@ -6,7 +6,7 @@ category:
 tag:
   - mysql
 ---
-# DML语句
+# Mysql-DML语句
 
 ## DDL语言
 
