@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - docker
+tag:
+  - docker
+---
 # docker进阶--unionfs
 
 - Docker 公司在实现 Docker 镜像时并没有沿用以前制作 rootfs 的标准流程，而是做了一个小小的创新：Docker 在镜像的设计中，引入了层（layer）的概念。

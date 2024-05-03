@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - docker
+tag:
+  - docker
+---
 # Docker进阶知识-清理docker数据
 
 - 电脑1t的磁盘现在只有几十G的剩余存储了，

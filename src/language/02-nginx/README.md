@@ -1,5 +1,5 @@
 ---
-title: 前端
+title: Nginx
 index: false
 icon: laptop-code
 ---

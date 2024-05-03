@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - docker
+tag:
+  - docker
+---
 # docker进阶-容器遇到的问题
 
 - 容器是一种轻量级的隔离技术，，轻量级的隔离造成了一些行为模式的不同
