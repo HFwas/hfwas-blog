@@ -11,6 +11,8 @@ tag:
 
 ## 安装
 
+### centos7.9
+
 - [具体的安装参考官方文档](https://github.com/containers/skopeo/blob/main/install.md)
 - 虚拟机环境是centos7.9
 
@@ -23,6 +25,24 @@ tag:
 - 测试命令，执行`skopeo`
 
 ![image-20240503155432708](images/image-20240503155432708.png)
+
+### mac
+
+- 执行`brew install skopeo`
+
+![image-20240503195740464](images/image-20240503195740464.png)
+
+- 命令测试，执行`skopeo --help`
+
+![image-20240503195817434](images/image-20240503195817434.png)
+
+- 查看命令版本，执行`skopeo --version`，mac安装的是最新版本1.15
+
+![image-20240503195921208](images/image-20240503195921208.png)
+
+- 安装完成！！
+
+
 
 ## 升级skopeo版本
 
