@@ -22,6 +22,14 @@ tag:
 - standalone-sign、standalone-verify 这两个是和镜像加密相关的，使用的不是很多；
 - sync：同步一个镜像从 A 到 B，感觉和 copy 一样，但 sync 支持的参数更多，功能更强大；
 
+## 支持格式
+
+- dir:path ： 支持本地存储
+- docker://docker-reference： 将镜像同步到另外一个registry 
+- docker-archive:path[:docker-reference] ： 类似docker save的效果，保存为本地.tar包的形式
+- docker-daemon:docker-reference ：保存为docker本地镜像，存储在本地镜像格式
+- oci:path:tag ： 实现了oci标准的
+
 ## 常见用法
 
 - 获取镜像仓库当中指定镜像的所有版本，执行`skopeo list-tags docker://registry.cn-hangzhou.aliyuncs.com/dkyy/track-issues-svc-v2`
