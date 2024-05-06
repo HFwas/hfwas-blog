@@ -1,3 +1,12 @@
+---
+icon: pen-to-square
+date: 2024-04-05
+order: 2
+category:
+  - ansible
+tag:
+  - ansible
+---
 # Ansible-基础命令
 
 - Ansible系列命令

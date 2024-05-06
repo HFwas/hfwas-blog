@@ -1,3 +1,12 @@
+---
+icon: pen-to-square
+date: 2024-04-05
+order: 1
+category:
+  - ansible
+tag:
+  - ansible
+---
 # Ansible-基础知识
 
 - 常用自动化运维工具

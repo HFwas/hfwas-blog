@@ -1,3 +1,12 @@
+---
+icon: pen-to-square
+date: 2024-04-05
+order: 4
+category:
+  - ansible
+tag:
+  - ansible
+---
 # Ansible-Playbook
 
 ## ansible-galaxy

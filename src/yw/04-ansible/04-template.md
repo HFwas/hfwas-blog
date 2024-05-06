@@ -1,3 +1,12 @@
+---
+icon: pen-to-square
+date: 2024-04-05
+order: 5
+category:
+  - ansible
+tag:
+  - ansible
+---
 # Ansible-Template
 
 - 文本文件，嵌套有脚本（使用模板编程语言编写)

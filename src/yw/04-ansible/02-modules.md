@@ -1,3 +1,12 @@
+---
+icon: pen-to-square
+date: 2024-04-05
+order: 3
+category:
+  - ansible
+tag:
+  - ansible
+---
 # Ansible-常用模块
 
 - Command:在远程主机执行命令，默认模块，可忽略-m选项
