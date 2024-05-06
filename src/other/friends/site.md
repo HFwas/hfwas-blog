@@ -21,3 +21,10 @@ logo="https://wiki.eryajf.net/img/logo.png"
 repo="https://github.com/eryajf/eryajf.github.io"
 preview="https://wiki.eryajf.net/img/logo.png"
 />
+<SiteInfo
+name="Reimu's blog"
+desc="Reimu's blog"
+url="https://blog.k8s.li/"
+logo="https://blog.k8s.li/images/favicon-32x32.png"
+preview="https://blog.k8s.li/images/favicon-32x32.png"
+/>
