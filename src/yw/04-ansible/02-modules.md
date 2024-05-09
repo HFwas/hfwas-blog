@@ -19,7 +19,6 @@ tag:
 - Script:运行脚本
   - -a  "/PATH/TO/SCRIPT_FILE"
   - ansible websrvs -m script -a  f1.sh
-
 - Copy:从服务器复制文件到客户端，
   - ansible srv  -m copy -a "src=/root/f1.sh dest=/tmp/f2.sh owner=wang mode=600. backup=yes”  如目标存在，默认覆盖，此处指定先备份
   - ansible srv  -m copy  -a "content='test content\n' dest=/tmp/f1.txt”利用内容，直接生成目标文件
@@ -28,7 +27,6 @@ tag:
 - File:设置文件属性
   - ansible srv-m file-a "path=/root/a.sh owner=wang mode=755"
   - ansible web -m file -a 'src=/app/testfile dest=/app/testfile-link state=link'
-
 - Hostname:管理主机名
   - ansible node1 -m hostname -a "name=websrv"
 - Cron:计划任务
@@ -50,7 +48,17 @@ tag:
 - Group:管理组
   - ansible srv -m group -a "name=testgroup system=yes"
   - ansible srv -m group -a "name=testgroup state=absent"
-
 - lineinfile模块：针对一个文件当中行内容的修改
-  - ansible test1  -m lineinfile -a "path=/etc/ssh/sshd_conf regex='^PermitRootLogin' line='PermitRootLogin no'"
+  - 更新行内容：ansible test1  -m lineinfile -a "path=/etc/ssh/sshd_conf regex='^PermitRootLogin' line='PermitRootLogin no'"
+  - 插入行内容：ansible test1  -m lineinfile -a "path=/etc/ssh/sshd_conf insertafter='7755$' line='Port 22'"
+- authorized_key模块：对虚拟机批量互信
+
+```
+- name: Set authorized key taken from file
+  authorized_key:
+    user: root
+    state: present
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+```
+
 - 
