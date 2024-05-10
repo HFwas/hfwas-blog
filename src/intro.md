@@ -22,8 +22,8 @@ cover: /assets/images/cover3.jpg
 `jenkins` `gitlab` `sonarqube` `nexus` `minio`  `k8s` `docker` `jmeter`
 
 - 负责代码仓库下的配置管理功能，基于gitlab开发，统一纳管服务配置文件，和流水线部署打通
-- 负责接口管理模块开发，基于jmeter开发，实现接口全生命周期管理，和项目打通
-- 参与项目管理平台向跟踪事项转换开发，支持项目下需求，缺陷，任务等可配置
+- 负责接口管理模块开发，基于jmeter开发，实现接口全生命周期管理
+- 参与项目管理平台向跟踪事项转换开发，实现项目下需求，缺陷等子事项可配置，评论等模块可动态替换
 - 负责部分权限平台功能开发，提供统一权限控制给到devops组件使用，支持devops当中资源级别权限管控
 - 基于jenkins二次开发流水线功能，支持项目三百多条流水线运行，提供项目下定制化流水线插件开发
 - 熟悉devops相关组件的部署机制，包括jenkins，gitlab，nexus等
@@ -50,6 +50,7 @@ cover: /assets/images/cover3.jpg
 ### Java相关框架
 
 - 熟练掌握Java的基础特性，封装、继承、多态。熟悉JVM相关
+- 熟悉多线程，了解常见的锁机制
 - 熟悉Spring相关框架Spring、SpringMVC、SpringBoot，了解源码实现
 - 熟悉持久化层Mybatis和MybatisPlus框架，熟悉MyBatis源码
 - 熟悉设计模式，项目当中能够基于实际场景运用设计模式提高代码
@@ -74,6 +75,7 @@ cover: /assets/images/cover3.jpg
 - 熟练使用Redis，
 
 ## 其他链接
+
 - 博客：[https://www.hfwas.tech/](https://www.hfwas.tech/)
 - Github：[https://github.com/HFwas](https://github.com/HFwas)
 - 邮箱：[hfwas1024@163.com](mailto:hfwas1024@163.com)
