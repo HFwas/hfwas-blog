@@ -145,7 +145,7 @@ public PooledDataSourceFactory() {
 
 #### 自定义参数
 
-```
+```java
 // OPTIONAL CONFIGURATION FIELDS
   // 在任意时间可以存在的活动（也就是正在使用）连接数量
   protected int poolMaximumActiveConnections = 10;
@@ -179,7 +179,7 @@ public PooledDataSourceFactory() {
 
 - 设置几个主要的参数，包括：驱动名称，链接地址，用户名，密码，事务隔离级别等
 
-```
+```java
 private ClassLoader driverClassLoader;
   private Properties driverProperties;
   private static Map<String, Driver> registeredDrivers = new ConcurrentHashMap<>();
@@ -244,7 +244,7 @@ private ClassLoader driverClassLoader;
 
 -   getConnection主要是调用doGetConnection方法实现
 
-```
+```java
 @Override
   public Connection getConnection() throws SQLException {
     return doGetConnection(username, password);
@@ -258,7 +258,7 @@ private ClassLoader driverClassLoader;
 
 - doGetConnection方法获取链接
 
-```
+```java
 private Connection doGetConnection(String username, String password) throws SQLException {
     Properties props = new Properties();
     if (driverProperties != null) {
@@ -290,7 +290,7 @@ private Connection doGetConnection(String username, String password) throws SQLE
 
 - 初始化驱动到registeredDrivers当中，当缓存当中没有的话，就执行下属逻辑
 
-```
+```java
 private synchronized void initializeDriver() throws SQLException {
     if (!registeredDrivers.containsKey(driver)) {
       // 获取驱动对应的实体类
@@ -317,7 +317,7 @@ private synchronized void initializeDriver() throws SQLException {
 
 - 配置链接的参数，比如网络超时时间，是否自动提交，事务的隔离级别
 
-```
+```java
 private void configureConnection(Connection conn) throws SQLException {
     // 默认的网络超时时间
     if (defaultNetworkTimeout != null) {
@@ -337,3 +337,75 @@ private void configureConnection(Connection conn) throws SQLException {
 
 
 ### 类PooledDataSource
+
+#### 构造方法
+
+- 主要设置数据源的各种参数，
+- 需要注意的是dataSource是UnpooledDataSource对象，数据源工厂的具体逻辑还是在非池化数据源当中实现的，
+
+```java
+private static final Log log = LogFactory.getLog(PooledDataSource.class);
+
+  private final PoolState state = new PoolState(this);
+
+  private final UnpooledDataSource dataSource;
+
+  // OPTIONAL CONFIGURATION FIELDS
+  // 在任意时间可以存在的活动（也就是正在使用）连接数量
+  protected int poolMaximumActiveConnections = 10;
+  // 任意时间可能存在的空闲连接数。
+  protected int poolMaximumIdleConnections = 5;
+  // 在被强制返回之前，池中连接被检出（checked out）时间
+  protected int poolMaximumCheckoutTime = 20000;
+  // 这是一个底层设置，如果获取连接花费了相当长的时间，连接池会打印状态日志并重新尝试获取一个连接（避免在误配置的情况下一直安静的失败）
+  protected int poolTimeToWait = 20000;
+  // 这是一个关于坏连接容忍度的底层设置， 作用于每一个尝试从缓存池获取连接的线程. 如果这个线程获取到的是一个坏的连接，那么这个数据源允许这个线程尝试重新获取一个新的连接，
+  // 但是这个重新尝试的次数不应该超过 poolMaximumIdleConnections 与 poolMaximumLocalBadConnectionTolerance 之和
+  protected int poolMaximumLocalBadConnectionTolerance = 3;
+  // 发送到数据库的侦测查询，用来检验连接是否正常工作并准备接受请求
+  protected String poolPingQuery = "NO PING QUERY SET";
+  // 是否启用侦测查询。若开启，需要设置 poolPingQuery 属性为一个可执行的 SQL 语句（最好是一个速度非常快的 SQL 语句），默认值：false。
+  protected boolean poolPingEnabled;
+  protected int poolPingConnectionsNotUsedFor;
+
+  private int expectedConnectionTypeCode;
+
+  public PooledDataSource() {
+    dataSource = new UnpooledDataSource();
+  }
+
+  public PooledDataSource(UnpooledDataSource dataSource) {
+    this.dataSource = dataSource;
+  }
+
+  public PooledDataSource(String driver, String url, String username, String password) {
+    dataSource = new UnpooledDataSource(driver, url, username, password);
+    expectedConnectionTypeCode = assembleConnectionTypeCode(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
+  }
+
+  public PooledDataSource(String driver, String url, Properties driverProperties) {
+    dataSource = new UnpooledDataSource(driver, url, driverProperties);
+    expectedConnectionTypeCode = assembleConnectionTypeCode(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
+  }
+
+  public PooledDataSource(ClassLoader driverClassLoader, String driver, String url, String username, String password) {
+    dataSource = new UnpooledDataSource(driverClassLoader, driver, url, username, password);
+    expectedConnectionTypeCode = assembleConnectionTypeCode(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
+  }
+
+  public PooledDataSource(ClassLoader driverClassLoader, String driver, String url, Properties driverProperties) {
+    dataSource = new UnpooledDataSource(driverClassLoader, driver, url, driverProperties);
+    expectedConnectionTypeCode = assembleConnectionTypeCode(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
+  }
+```
+
+####  getConnection
+
+```
+@Override
+  public Connection getConnection() throws SQLException {
+    return popConnection(dataSource.getUsername(), dataSource.getPassword()).getProxyConnection();
+  }
+```
+
+- 获取链接方法getConnection实际上是调用的popConnection方法，返回了一个java.sql.Connection对象，
