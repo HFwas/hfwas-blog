@@ -19,7 +19,7 @@ tag:
 
 ## 静态属性
 
-```
+```java
 private final List<Interceptor> interceptors = new ArrayList<>();
 ```
 
@@ -27,7 +27,7 @@ private final List<Interceptor> interceptors = new ArrayList<>();
 
 ## 类Interceptor
 
-```
+```java
 public interface Interceptor {
 
   // 拦截方法
@@ -54,7 +54,7 @@ public interface Interceptor {
 
 - 应用所有拦截器到指定对象
 
-```
+```java
 public Object pluginAll(Object target) {
     for (Interceptor interceptor : interceptors) {
       target = interceptor.plugin(target);
@@ -69,7 +69,7 @@ public Object pluginAll(Object target) {
 
 - 方法interceptor.plugin(target);在org.apache.ibatis.plugin.Interceptor被实现，
 
-```
+```java
 /**
    * 应用插件
    * @param target 目标对象
@@ -101,7 +101,7 @@ public Object pluginAll(Object target) {
 
 ### 方法getSignatureMap
 
-```
+```java
 private static Map<Class<?>, Set<Method>> getSignatureMap(Interceptor interceptor) {
     // 基于注解Intercepts和Signature获取内容
     // 获取目标类上的Intercepts注解对象
@@ -129,7 +129,7 @@ private static Map<Class<?>, Set<Method>> getSignatureMap(Interceptor intercepto
 
 具体的Intercepts和Signature形式参考插件模块的测试类，如下所示：
 
-```
+```java
 @Intercepts({
       @Signature(type = Map.class, method = "get", args = {Object.class})})
   public static class AlwaysMapPlugin implements Interceptor {
@@ -149,7 +149,7 @@ private static Map<Class<?>, Set<Method>> getSignatureMap(Interceptor intercepto
 
 ### 构造方法
 
-```
+```java
 public class Invocation {
 
   // 目标对象
@@ -172,7 +172,7 @@ public class Invocation {
 
 ### 构造方法
 
-```
+```java
 
 public class Plugin implements InvocationHandler {
 
@@ -191,7 +191,7 @@ public class Plugin implements InvocationHandler {
 
 ### 方法wrap
 
-```
+```java
 public static Object wrap(Object target, Interceptor interceptor) {
     // 1、获取拦截器所有的签名集合
     Map<Class<?>, Set<Method>> signatureMap = getSignatureMap(interceptor);
@@ -217,7 +217,7 @@ public static Object wrap(Object target, Interceptor interceptor) {
 
 - 然后获取目前对象的所有接口getAllInterfaces
 
-```
+```java
 private static Class<?>[] getAllInterfaces(Class<?> type, Map<Class<?>, Set<Method>> signatureMap) {
     Set<Class<?>> interfaces = new HashSet<>();
     while (type != null) {

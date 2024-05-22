@@ -19,7 +19,7 @@ tag:
 
 - 将异常转换为mybatis自己的业务错误，
 
-```
+```java
 public class ExceptionFactory {
 
   private ExceptionFactory() {
@@ -38,7 +38,7 @@ public class ExceptionFactory {
 
 - mybatis自己的特有错误类，返回太多结果异常。
 
-```
+```java
 public class TooManyResultsException extends PersistenceException {
 
   private static final long serialVersionUID = 8935197089745865786L;
