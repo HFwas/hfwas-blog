@@ -11,6 +11,14 @@ tag:
 ---
 # jstack命令
 
+## 常见用法
+
+- 主要是-l 参数，其他不常用
+
+![image-20240525170124121](images/image-20240525170124121.png)
+
+## 示例
+
 - 执行命令`jstack -l 10 `
 
 ```java
@@ -73,4 +81,3 @@ _java_thread_list=0x00007f88880018f0, length=92, elements={
 	- None
 ```
 
-- 

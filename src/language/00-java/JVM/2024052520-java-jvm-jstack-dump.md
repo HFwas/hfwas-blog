@@ -77,3 +77,6 @@ tag:
 
 ![image-20240525122036882](images/image-20240525122036882.png)
 
+## 参考地址
+
+- https://dzone.com/articles/how-to-read-a-thread-dump
