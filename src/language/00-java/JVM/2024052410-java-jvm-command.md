@@ -1,6 +1,7 @@
 ---
 icon: pen-to-square
 date: 2024-05-25
+order: 291
 category:
   - jvm
 tag:
@@ -9,7 +10,7 @@ tag:
   - jstat
   - jstack
 ---
-# JVM相关的命令
+# JVM - JVM相关的命令
 
 ## jps 
 

@@ -1,6 +1,7 @@
 ---
 icon: pen-to-square
 date: 2024-05-25
+order: 293
 category:
   - jvm
 tag:
@@ -9,7 +10,7 @@ tag:
   - jstat
   - jstack
 ---
-# jstack dump信息详解
+# JVM - jstack dump信息详解
 
 - jstack输出的信息当中有以下几块内容：
   - JVM虚拟机的信息

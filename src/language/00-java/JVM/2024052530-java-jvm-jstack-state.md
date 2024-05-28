@@ -1,6 +1,7 @@
 ---
 icon: pen-to-square
 date: 2024-05-25
+order: 294
 category:
   - jvm
 tag:
@@ -9,7 +10,7 @@ tag:
   - jstat
   - jstack
 ---
-# jvm线程状态
+# JVM - jvm线程状态
 
 - 执行`jstack -l `查看当前线程的堆栈信息，可以看到线程的堆栈信息，当中有一个部分展示的是：
 

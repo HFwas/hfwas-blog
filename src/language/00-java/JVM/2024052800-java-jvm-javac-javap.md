@@ -1,6 +1,7 @@
 ---
 icon: pen-to-square
 date: 2024-05-25
+order: 295
 category:
   - jvm
 tag:
@@ -9,7 +10,7 @@ tag:
   - javap
 ---
 
-# jvm - javac和javap命令
+# JVM - javac和javap命令
 
 - javac命令执行java代码编译
 - javap 可以对class文件反编译，获取对应的字节码文件
