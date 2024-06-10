@@ -80,36 +80,72 @@ tag:
 ```bash
 #!/bin/bash
 
-mkdir maven-aliyun
+mkdir -p maven-aliyun
 cd maven-aliyun
-# 解析XML文件并创建文件夹
-create_folders_from_xml() {
+
+# Function to parse the XML file, create directories, and download files
+create_folders_and_download_files_from_xml() {
     XML_FILE="$1"
     
-    # 使用xmlstarlet解析XML文件
+    # Ensure the XML file exists
+    if [[ ! -f "$XML_FILE" ]]; then
+        echo "XML file $XML_FILE does not exist. Please check the path and try again."
+        exit 1
+    fi
+
+    # Use xmlstarlet to parse the XML file
     GROUP_IDS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "groupId" -n "$XML_FILE")
     ARTIFACT_IDS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "artifactId" -n "$XML_FILE")
     VERSIONS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "version" -n "$XML_FILE")
     
-    # 循环创建文件夹
+    # Define the file extensions to download
+    FILE_EXTENSIONS=("jar" "jar.md5" "jar.sha1" "pom" "pom.md5" "pom.sha1")
+    
+    # Loop to create directories and download files
     IFS=$'\n'
     for i in $(seq 1 $(echo "$GROUP_IDS" | wc -l)); do
         GROUP_ID=$(echo "$GROUP_IDS" | sed -n "${i}p")
         ARTIFACT_ID=$(echo "$ARTIFACT_IDS" | sed -n "${i}p")
         VERSION=$(echo "$VERSIONS" | sed -n "${i}p")
         
-        # 替换 . 为 /
-        GROUP_ID=$(echo "$GROUP_ID" | sed 's/\./\//g')
-        ARTIFACT_ID=$(echo "$ARTIFACT_ID" | sed 's/\./\//g')
+        # Replace . with /
+        GROUP_ID_PATH=$(echo "$GROUP_ID" | sed 's/\./\//g')
+        ARTIFACT_ID_PATH=$(echo "$ARTIFACT_ID" | sed 's/\./\//g')
         
-        FOLDER_PATH="${GROUP_ID}/${ARTIFACT_ID}/${VERSION}"
-        mkdir -p "$FOLDER_PATH"
-        echo "Created folder: $FOLDER_PATH"
+        FOLDER_PATH="${GROUP_ID_PATH}/${ARTIFACT_ID}/${VERSION}"
+
+        if [[ ! -d "$FOLDER_PATH" ]]; then
+            mkdir -p "$FOLDER_PATH"
+            echo "Created folder: $FOLDER_PATH"
+        else
+            echo "Folder already exists: $FOLDER_PATH"
+        fi
+        
+        # Construct the URL to download each file type
+        BASE_URL="https://repo1.maven.org/maven2"
+        
+        for EXT in "${FILE_EXTENSIONS[@]}"; do
+            FILE_NAME="${ARTIFACT_ID}-${VERSION}.${EXT}"
+            FILE_URL="${BASE_URL}/${GROUP_ID_PATH}/${ARTIFACT_ID}/${VERSION}/${FILE_NAME}"
+            FILE_PATH="${FOLDER_PATH}/${FILE_NAME}"
+            
+            if [[ ! -f "$FILE_PATH" ]]; then
+                echo "Attempting to download: $FILE_URL"
+                wget -P "$FOLDER_PATH" "$FILE_URL"
+                if [[ $? -eq 0 ]]; then
+                    echo "Downloaded: $FILE_URL"
+                else
+                    echo "Failed to download: $FILE_URL"
+                fi
+            else
+                echo "File already exists: $FILE_PATH"
+            fi
+        done
     done
 }
 
-# 替换 'your_xml_file.xml' 为您的 XML 文件路径
-create_folders_from_xml '/Users/hfwas/Downloads/archetype-catalog.xml'
+# Replace 'your_xml_file.xml' with your XML file path
+create_folders_and_download_files_from_xml '/Users/hfwas/Downloads/archetype-catalog.xml'
 
 ```
 
