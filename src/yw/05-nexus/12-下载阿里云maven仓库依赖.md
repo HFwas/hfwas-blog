@@ -80,73 +80,78 @@ tag:
 ```bash
 #!/bin/bash
 
-mkdir -p maven-aliyun
-cd maven-aliyun
+# Function to create folders recursively
+create_folders_recursive() {
+    local current_url="$1"
+    local parent_folder="$2"
 
-# Function to parse the XML file, create directories, and download files
-create_folders_and_download_files_from_xml() {
-    XML_FILE="$1"
-    
-    # Ensure the XML file exists
-    if [[ ! -f "$XML_FILE" ]]; then
-        echo "XML file $XML_FILE does not exist. Please check the path and try again."
-        exit 1
-    fi
+    # Get webpage content
+    local html_content=$(curl -s "$current_url")
 
-    # Use xmlstarlet to parse the XML file
-    GROUP_IDS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "groupId" -n "$XML_FILE")
-    ARTIFACT_IDS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "artifactId" -n "$XML_FILE")
-    VERSIONS=$(xmlstarlet sel -t -m "/archetype-catalog/archetypes/archetype" -v "version" -n "$XML_FILE")
-    
-    # Define the file extensions to download
-    FILE_EXTENSIONS=("jar" "jar.md5" "jar.sha1" "pom" "pom.md5" "pom.sha1")
-    
-    # Loop to create directories and download files
-    IFS=$'\n'
-    for i in $(seq 1 $(echo "$GROUP_IDS" | wc -l)); do
-        GROUP_ID=$(echo "$GROUP_IDS" | sed -n "${i}p")
-        ARTIFACT_ID=$(echo "$ARTIFACT_IDS" | sed -n "${i}p")
-        VERSION=$(echo "$VERSIONS" | sed -n "${i}p")
-        
-        # Replace . with /
-        GROUP_ID_PATH=$(echo "$GROUP_ID" | sed 's/\./\//g')
-        ARTIFACT_ID_PATH=$(echo "$ARTIFACT_ID" | sed 's/\./\//g')
-        
-        FOLDER_PATH="${GROUP_ID_PATH}/${ARTIFACT_ID}/${VERSION}"
+    # Parse HTML and extract href content, create folders
+    echo "$html_content" | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' | while read -r href; do
+        # Exclude links returning to the parent directory
+        if [[ "$href" != "../" ]]; then
+            # Check if href is a folder or a file
+            if [[ "$href" == */ ]]; then
+                # Remove trailing slash
+                local folder_name=$(echo "$href" | sed 's:/$::')
+                # Create folder
+                local folder_path="$parent_folder/$folder_name"
+                folder_path=$(echo "$folder_path" | sed 's:^\./::')
 
-        if [[ ! -d "$FOLDER_PATH" ]]; then
-            mkdir -p "$FOLDER_PATH"
-            echo "Created folder: $FOLDER_PATH"
-        else
-            echo "Folder already exists: $FOLDER_PATH"
-        fi
-        
-        # Construct the URL to download each file type
-        BASE_URL="https://repo1.maven.org/maven2"
-        
-        for EXT in "${FILE_EXTENSIONS[@]}"; do
-            FILE_NAME="${ARTIFACT_ID}-${VERSION}.${EXT}"
-            FILE_URL="${BASE_URL}/${GROUP_ID_PATH}/${ARTIFACT_ID}/${VERSION}/${FILE_NAME}"
-            FILE_PATH="${FOLDER_PATH}/${FILE_NAME}"
-            
-            if [[ ! -f "$FILE_PATH" ]]; then
-                echo "Attempting to download: $FILE_URL"
-                wget -P "$FOLDER_PATH" "$FILE_URL"
-                if [[ $? -eq 0 ]]; then
-                    echo "Downloaded: $FILE_URL"
+                if [[ ! -d "$folder_path" ]]; then
+                    mkdir -p "$folder_path"
+                    echo "Created folder: $folder_path"
                 else
-                    echo "Failed to download: $FILE_URL"
+                    echo "Folder already exists: $folder_path"
                 fi
+
+                # Recursively call function for subfolder
+                create_folders_recursive "$current_url$href" "$folder_path"
             else
-                echo "File already exists: $FILE_PATH"
+                if [[ "$href" == *.jar || "$href" == *.jar.sha1 || "$href" == *.pom || "$href" == *.pom.sha1 ]]; then
+                    # It's a file, ignore
+                    local file_path="$parent_folder/$href"
+                    file_path=$(echo "$file_path" | sed 's:^\./::')
+                    echo "Ignored file: $file_path"
+                    echo "parent_folder : $parent_folder"
+
+                    # Construct the URL to download each file type
+                    BASE_URL="https://repo1.maven.org/maven2"
+                    FILE_URL="${BASE_URL}/${file_path}"
+
+                    if [[ ! -f "$file_path" ]]; then
+                        echo "Attempting to download: $parent_folder $file_path"
+                        wget -P "$parent_folder" "$FILE_URL"
+                        if [[ $? -eq 0 ]]; then
+                            echo "Downloaded: $FILE_URL"
+                        else
+                            echo "Failed to download: $FILE_URL"
+                        fi
+                    else
+                        echo "File already exists: $FILE_PATH"
+                    fi
+                else
+                    # It's a file, but not of the specified types, ignore
+                    local file_path="$parent_folder/$href"
+                    file_path=$(echo "$file_path" | sed 's:^\./::')
+                    echo "Ignored file: $file_path"
+                fi
             fi
-        done
+        fi
     done
 }
 
-# Replace 'your_xml_file.xml' with your XML file path
-create_folders_and_download_files_from_xml '/Users/hfwas/Downloads/archetype-catalog.xml'
+# Define target URL
+url="https://repo1.maven.org/maven2/"
 
+# Create initial folder
+mkdir -p maven-aliyun
+cd maven-aliyun
+
+# Call recursive function to create folders
+create_folders_recursive "$url" .
 ```
 
 - 
