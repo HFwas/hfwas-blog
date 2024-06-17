@@ -110,7 +110,7 @@ create_folders_recursive() {
                 # Recursively call function for subfolder
                 create_folders_recursive "$current_url$href" "$folder_path"
             else
-                if [[ "$href" == *.jar || "$href" == *.jar.sha1 || "$href" == *.pom || "$href" == *.pom.sha1 ]]; then
+                if [[ ("$href" == *.jar || "$href" == *.jar.sha1 || "$href" == *.pom || "$href" == *.pom.sha1) && "$href" != *-sources.* && "$href" != *-javadoc.* ]]; then
                     # It's a file, ignore
                     local file_path="$parent_folder/$href"
                     file_path=$(echo "$file_path" | sed 's:^\./::')
@@ -152,6 +152,7 @@ cd maven-aliyun
 
 # Call recursive function to create folders
 create_folders_recursive "$url" .
+
 ```
 
 - 
