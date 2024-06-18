@@ -123,7 +123,7 @@ create_folders_recursive() {
 
                     if [[ ! -f "$file_path" ]]; then
                         echo "Attempting to download: $parent_folder $file_path"
-                        wget -P "$parent_folder" "$FILE_URL"
+                        wget -T 120 -P "$parent_folder" "$FILE_URL"
                         if [[ $? -eq 0 ]]; then
                             echo "Downloaded: $FILE_URL"
                         else
