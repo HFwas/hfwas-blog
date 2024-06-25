@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - docker
 tag:
-  - JVM
+  - docker
 ---
 # 报错记录 - Error importing repomd.xml for docker-ce-stable: Damaged repomd.xml file
 

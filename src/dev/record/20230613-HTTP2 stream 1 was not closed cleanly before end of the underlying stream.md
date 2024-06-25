@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - git
 tag:
-  - JVM
+  - git
 ---
 # 报错记录 - HTTP/2 stream 1 was not closed cleanly before end of the underlying stream
 

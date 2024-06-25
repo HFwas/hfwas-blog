@@ -2,10 +2,6 @@
 icon: pen-to-square
 date: 2024-04-21
 order: 1
-category:
-  - JVM
-tag:
-  - JVM
 ---
 # 报错记录 - Failed to download metadata for repo 'AppStream'
 

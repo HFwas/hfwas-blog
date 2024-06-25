@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - localdate
 tag:
-  - JVM
+  - linux
 ---
 # 报错记录 - /var/lib/mlocate/mlocate.db': 没有那个文件或目录
 

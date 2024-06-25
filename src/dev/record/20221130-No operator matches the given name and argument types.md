@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - postgresql
 tag:
-  - JVM
+  - postgresql
 ---
 # 报错记录 - No operator matches the given name and argument types
 

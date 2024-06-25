@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - kubectl
 tag:
-  - JVM
+  - k8s
 ---
 # 报错记录 - kubectl cp error tar removing leading /' from member names
 

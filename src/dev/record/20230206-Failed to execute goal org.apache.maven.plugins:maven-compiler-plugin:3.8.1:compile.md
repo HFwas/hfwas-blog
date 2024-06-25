@@ -3,9 +3,9 @@ icon: pen-to-square
 date: 2024-04-21
 order: 1
 category:
-  - JVM
+  - maven
 tag:
-  - JVM
+  - maven
 ---
 # 报错记录 - Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile
 
