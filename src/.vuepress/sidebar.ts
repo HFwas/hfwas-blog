@@ -17,6 +17,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "开发相关",
+      icon: "book",
+      prefix: "dev/",
+      link: "dev/",
+      children: "structure",
+    },
+    {
       text: "语言知识",
       icon: "book",
       prefix: "language/",

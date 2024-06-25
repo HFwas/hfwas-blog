@@ -59,6 +59,25 @@ export default navbar([
     ]
   },
   {
+    text: "开发相关",
+    icon: "pen-to-square",
+    prefix: "/dev/",
+    children: [
+      {
+        text: "基础类库",
+        icon: "pen-to-square",
+        prefix: "class/",
+        link: "class/01-bean耗时"
+      },
+      {
+        text: "错误笔记",
+        icon: "pen-to-square",
+        prefix: "record/",
+        link: "record/"
+      },
+    ]
+  },
+  {
     text: "语言知识",
     icon: "pen-to-square",
     prefix: "/language/",
