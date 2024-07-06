@@ -1,3 +1,11 @@
+---
+icon: pen-to-square
+date: 2024-04-16
+category:
+  - linux
+tag:
+  - linux
+---
 # 软件安装-xshell和xftp
 
 - xshell和xftp提供了免费的家庭和学生计划，可以访问`https://www.xshell.com/zh/free-for-home-school/`地址获取到最新的xshell和xftp版本，可以免费使用
