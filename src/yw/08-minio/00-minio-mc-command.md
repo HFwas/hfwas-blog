@@ -1,4 +1,4 @@
-# minio-mc命令
+# Minio-mc命令
 
 ## 下载地址
 

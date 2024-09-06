@@ -43,6 +43,30 @@ export default navbar([
         prefix: "05-nexus/",
         link: "05-nexus/index",
       },
+      {
+        text: "Helm",
+        icon: "pen-to-square",
+        prefix: "06-helm/",
+        link: "06-helm/index",
+      },
+      {
+        text: "Jenkins",
+        icon: "pen-to-square",
+        prefix: "07-jenkins/",
+        link: "07-jenkins/index",
+      },
+      {
+        text: "Minio",
+        icon: "pen-to-square",
+        prefix: "08-minio/",
+        link: "08-minio/00-minio-mc-command",
+      },
+      {
+        text: "Mysql",
+        icon: "pen-to-square",
+        prefix: "09-mysql/",
+        link: "09-mysql/00-enable-bin-log",
+      },
     ]
   },
   {
@@ -74,6 +98,12 @@ export default navbar([
         icon: "pen-to-square",
         prefix: "record/",
         link: "record/"
+      },
+      {
+        text: "杂记",
+        icon: "pen-to-square",
+        prefix: "other/",
+        link: "other/"
       },
     ]
   },
