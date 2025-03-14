@@ -1,14 +1,13 @@
 # jenkins常见问题-illegal string body character after dollar sign
 
-- 今天遇到了一个问题，报错截图如下：
+- 今天遇到了一个问题，报错截图如下`WorkflowScript: 98: i1legal string body character after dollar sign`
 
-![image-20240929222225871](images/image-20240929222225871.png)
+![image-20250314145049981](images/image-20250314145049981.png)
 
 - 解决办法：
 
-  - 将流水线的`"""`修改为`'''`，将shell命令包围的修改一下
+  - 将流水线涉及特殊字符的`"""`修改为`'''`，将shell命令包围的修改一下
 
-  ![image-20240929222308245](images/image-20240929222308245.png)
 
 ## 参考链接
 
