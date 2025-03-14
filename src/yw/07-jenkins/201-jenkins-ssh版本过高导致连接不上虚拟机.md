@@ -9,8 +9,6 @@
 - 阿里云申请一个抢占士实例的ecs， 公共镜像选择alibaba cloud linux3.2104LTS 64位
   - 自带了openssl 1.1.1k版本,不用再自己升级openssl了
 
-![image-20241128100339544](images/image-20241128100339544.png)
-
 - 执行`wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.8p1.tar.gz`，下载openssh9.8p1版本
 - 执行
 
@@ -186,156 +184,7 @@ PasswordAuthentication yes
 - 替换为内网可复现的sshd配置文件，如下
 
 ```shell
-#	$OpenBSD: sshd_config,v 1.104 2021/07/02 05:11:21 dtucker Exp $
-
-# This is the sshd server system-wide configuration file.  See
-# sshd_config(5) for more information.
-
-# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-
-# The strategy used for options in the default sshd_config shipped with
-# OpenSSH is to specify options with their default value where
-# possible, but leave them commented.  Uncommented options override the
-# default value.
-
-# To modify the system-wide sshd configuration, create a  *.conf  file under
-#  /etc/ssh/sshd_config.d/  which will be automatically included below
-Include /etc/ssh/sshd_config.d/*.conf
-
-# If you want to change the port on a SELinux system, you have to tell
-# SELinux about this change.
-# semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
-#
-Port 7755
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-
-HostKey /etc/ssh/ssh_host_rsa_key
-#HostKey /etc/ssh/ssh_host_ecdsa_key
-HostKey /etc/ssh/ssh_host_ed25519_key
-
-# Ciphers and keying
-#RekeyLimit default none
-
-# Logging
-#SyslogFacility AUTH
-SyslogFacility AUTH
-#LogLevel INFO
-
-# Authentication:
-
-#LoginGraceTime 2m
-PermitRootLogin yes
-#StrictModes yes
-#MaxAuthTries 6
-#MaxSessions 10
-
-#PubkeyAuthentication yes
-
-# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
-# but this is overridden so installations will only check .ssh/authorized_keys
-AuthorizedKeysFile	.ssh/authorized_keys
-
-#AuthorizedPrincipalsFile none
-
-#AuthorizedKeysCommand none
-#AuthorizedKeysCommandUser nobody
-
-# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
-#HostbasedAuthentication no
-# Change to yes if you don't trust ~/.ssh/known_hosts for
-# HostbasedAuthentication
-#IgnoreUserKnownHosts no
-# Don't read the user's ~/.rhosts and ~/.shosts files
-#IgnoreRhosts yes
-
-# To disable tunneled clear text passwords, change to no here!
-PasswordAuthentication yes
-#PermitEmptyPasswords no
-
-# Change to no to disable s/key passwords
-KbdInteractiveAuthentication no
-
-# Kerberos options
-#KerberosAuthentication no
-#KerberosOrLocalPasswd yes
-#KerberosTicketCleanup yes
-#KerberosGetAFSToken no
-#KerberosUseKuserok yes
-
-# GSSAPI options
-GSSAPIAuthentication no
-GSSAPICleanupCredentials no
-#GSSAPIStrictAcceptorCheck yes
-#GSSAPIKeyExchange no
-#GSSAPIEnablek5users no
-
-# Set this to 'yes' to enable PAM authentication, account processing,
-# and session processing. If this is enabled, PAM authentication will
-# be allowed through the KbdInteractiveAuthentication and
-# PasswordAuthentication.  Depending on your PAM configuration,
-# PAM authentication via KbdInteractiveAuthentication may bypass
-# the setting of "PermitRootLogin without-password".
-# If you just want the PAM account and session checks to run without
-# PAM authentication, then enable this but set PasswordAuthentication
-# and KbdInteractiveAuthentication to 'no'.
-# WARNING: 'UsePAM no' is not supported in openEuler and may cause several
-# problems.
-UsePAM yes
-
-#AllowAgentForwarding yes
-#AllowTcpForwarding yes
-#GatewayPorts no
-X11Forwarding no
-#X11DisplayOffset 10
-#X11UseLocalhost yes
-#PermitTTY yes
-PrintMotd no
-#PrintLastLog yes
-#TCPKeepAlive yes
-#PermitUserEnvironment no
-#Compression delayed
-#ClientAliveInterval 0
-#ClientAliveCountMax 3
-#UseDNS no
-#PidFile /var/run/sshd.pid
-#MaxStartups 10:30:100
-#PermitTunnel no
-#ChrootDirectory none
-#VersionAddendum none
-
-# no default banner path
-#Banner none
-
-AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
-AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
-AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
-AcceptEnv XMODIFIERS
-
-# override default of no subsystems
-Subsystem sftp /usr/libexec/openssh/sftp-server -l INFO -f AUTH
-
-# Example of overriding settings on a per-user basis
-#Match User anoncvs
-#	X11Forwarding no
-#	AllowTcpForwarding no
-#	PermitTTY no
-#	ForceCommand cvs server
-#CheckUserSplash yes
-
-Protocol 2
-LogLevel VERBOSE
-PubkeyAuthentication yes
-IgnoreRhosts yes
-HostbasedAuthentication no
-PermitEmptyPasswords no
-PermitUserEnvironment no
-Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com
-ClientAliveCountMax 0
-Banner /etc/issue.net
-MACs hmac-sha2-512,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-256-etm@openssh.com
-StrictModes yes
+// 省略
 AllowTcpForwarding no
 AllowAgentForwarding no
 GatewayPorts no
@@ -350,8 +199,6 @@ PubkeyAcceptedKeyTypes ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-256
 
 - 重启sshd服务，启动报错，报错日志截图如下：
 
-![image-20241128102123108](images/image-20241128102123108.png)
-
 - 将以下内容删除，
 
 ```shell
@@ -360,8 +207,6 @@ CASignatureAlgorithms ssh-ed25519,sk-ssh-ed25519@openssh.com,rsa-sha2-512,rsa-sh
 ```
 
 - 重启服务，执行`systemctl restart sshd`
-
-![image-20241128102244889](images/image-20241128102244889.png)
 
 - 然后代码测试连接，发现可以测试连接成功，发现原因：可能是因为这两行配置导致的，将内网的sshd_config配置文件同样删除这两行，重启sshd服务，发现可以连接成功了。
 - 问题解决！
