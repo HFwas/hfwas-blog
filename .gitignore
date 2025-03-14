@@ -6,7 +6,6 @@ node_modules
 dump.rdb
 docs/.vuepress/.cache/
 docs/.vuepress/.temp/
-images
 *.log
 .yarn
 *-vip.md
