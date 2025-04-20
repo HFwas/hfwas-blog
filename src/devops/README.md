@@ -1,5 +1,5 @@
 ---
-title: 编程语言
+title: Devops 技能
 index: false
 icon: laptop-code
 category:
