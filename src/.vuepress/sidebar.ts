@@ -6,8 +6,8 @@ export default sidebar({
     {
       text: "运维知识",
       icon: "laptop-code",
-      prefix: "yw/",
-      link: "yw/",
+      prefix: "devops/",
+      link: "devops/",
       children: "structure",
     },
     {

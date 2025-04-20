@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
+import sidebar from "./sidecar/index.ts";
 
 export default hopeTheme({
   hostname: "https://www.hfwas.tech",
@@ -13,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/devops.svg",
 
   repo: "https://github.com/HFwas/hfwas-blog",
 
@@ -26,12 +25,14 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023006845号-2</a>',
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023006845号-2</a> | 主题: <a href="https://vuepress-theme-hope.github.io/v2/" target="_blank">VuePress Theme Hope</a>',
   displayFooter: true,
+
+  pageInfo: ["Author", "Category", "Tag", "Original", "Word", "ReadingTime"],
 
   // 博客相关
   blog: {
-    description: "JAVA开发，运维能手",
+    description: "基于云原生的Devops工程师",
     intro: "/intro.html",
     medias: {
       Email: "hfwas1024@163.com",
