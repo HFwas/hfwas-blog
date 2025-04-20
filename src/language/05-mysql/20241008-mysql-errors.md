@@ -16,9 +16,7 @@
 SET SESSION SQL_MODE='ALLOW_INVALID_DATES'
 ```
 
-- 类似：
-
-![image-20241008092519045](images/image-20241008092519045.png)
+- 
 
 参考链接
 
