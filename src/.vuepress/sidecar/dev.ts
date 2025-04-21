@@ -13,7 +13,7 @@ export const dev = arraySidebar([
     },
     {
         text: "错误笔记",
-        icon: "experience",
+        icon: "fa-solid fa-bug",
         prefix: "record/",
         collapsible: false,
         children: [
