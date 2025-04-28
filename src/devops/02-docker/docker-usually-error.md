@@ -1,6 +1,5 @@
 ---
-icon: pen-to-square
-date: 2024-05-03
+title: Docker 常见报错汇总
 order: 20
 category:
   - docker

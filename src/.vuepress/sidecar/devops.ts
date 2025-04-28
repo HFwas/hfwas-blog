@@ -49,7 +49,7 @@ export const devops = arraySidebar([
             "docker07-kill容器1号进程.md",
             "docker08-容器僵尸进程.md",
             "docker09-容器遇到的问题.md",
-            "docker-error00-Error saving credentials.md",
+            "docker-usually-error.md",
         ],
     },
     {
@@ -121,7 +121,7 @@ export const devops = arraySidebar([
             "002-jenkins-shard-library.md",
             "003-jenkins-agent.md",
             "004-jenkins-command-root.md",
-            "200-jenkins-issues-00.md",
+            "200-jenkins-common-issues.md",
             "201-jenkins-ssh版本过高导致连接不上虚拟机.md",
         ],
     },

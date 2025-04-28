@@ -9,6 +9,7 @@ export const dev = arraySidebar([
         children: [
             "1-remote-debug.md",
             "2-performance-optimization.md",
+            "3-config-ssh-clone.md",
         ],
     },
     {
