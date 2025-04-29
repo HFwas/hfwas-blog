@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const devops = arraySidebar([
     {
         text: "Linux",
-        icon: "fa-brands fa-linux",
+        icon: "/linux-brands.svg",
         prefix: "00-linux/",
         collapsible: true,
         children: [
@@ -16,7 +16,7 @@ export const devops = arraySidebar([
         ],
     },{
         text: "Shell",
-        icon: "fa-solid fa-terminal",
+        icon: "/terminal-solid.svg",
         prefix: "01-shell/",
         collapsible: true,
         children: [
@@ -24,7 +24,7 @@ export const devops = arraySidebar([
         ],
     },{
         text: "Docker",
-        icon: "fa-brands fa-docker",
+        icon: "/docker-brands.svg",
         prefix: "02-docker/",
         collapsible: true,
         children: [
@@ -112,7 +112,7 @@ export const devops = arraySidebar([
     },
     {
         text: "Jenkins",
-        icon: "fa-brands fa-jenkins",
+        icon: "/jenkins-brands.svg",
         prefix: "07-jenkins/",
         collapsible: true,
         children: [
@@ -165,7 +165,7 @@ export const devops = arraySidebar([
     },
     {
         text: "Mysql",
-        icon: "fa-solid fa-database",
+        icon: "/database-solid.svg",
         prefix: "09-mysql/",
         collapsible: true,
         children: [
