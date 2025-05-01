@@ -12,7 +12,7 @@ export default defineUserConfig({
 
   head: [
       // meta
-      ["meta", { name: "robots", content: "all" }],
+      // ["meta", { name: "robots", content: "all" }],
       ["meta", { name: "author", content: "Guide" }],
       ["meta", { "http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate",},],
       ["meta", { "http-equiv": "Pragma", content: "no-cache" }],

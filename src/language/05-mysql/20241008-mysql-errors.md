@@ -1,4 +1,4 @@
-# mysql常见错误
+# MySql常见错误
 
 # Variable ‘time_zone‘ can‘t be set to the value of ‘NULL‘
 

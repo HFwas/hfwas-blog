@@ -1,13 +1,10 @@
 ---
-icon: pen-to-square
-date: 2024-04-16
-order: 6
 category:
   - mysql
 tag:
   - mysql
 ---
-# Mysql-DML语句
+# MySql-DML语句
 
 ## DDL语言
 
@@ -411,7 +408,6 @@ WHERE bo.`boyName`='黄晓明';
 ```
 
 - 
-
 
 
 

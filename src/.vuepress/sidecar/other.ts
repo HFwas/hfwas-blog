@@ -29,13 +29,11 @@ export const other = arraySidebar([
         prefix: "softerware/",
         collapsible: false,
         children: [
-            "20220312-homebrew安装openresty.md",
-            "20220312-homebrew安装telnet.md",
-            "20220312-homwbrew安装lua.md",
             "20220329-内网安装docker环境.md",
+            "20220821-外网安装docker.md",
+            "20220828-linux命令自动补全.md",
+            "20220828-linux安装git.md",
             "20240311-xshell和xftp.md",
-            "20240706-mac-finalshell.md",
-            "20240706-mac-homebrew.md",
         ],
     },
     {

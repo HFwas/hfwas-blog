@@ -1,6 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-04-04
 category:
   - nginx
 tag:
@@ -10,7 +8,7 @@ tag:
 star: true
 ---
 
-# Nginx-nginx配置https
+# Nginx-配置https
 
 - 提前准备好后缀名称为pem和key的文件，
 - 上传到服务器nginx对应目录下，我这边新建了一个cert文件夹放置
