@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-04-04
-order: 6
 category:
   - blog
 tag:

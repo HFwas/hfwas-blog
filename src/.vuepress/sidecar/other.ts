@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const other = arraySidebar([
     {
         text: "博客",
-        icon: "et-performance",
+        icon: "/blog-solid.svg",
         prefix: "blog/",
         collapsible: false,
         children: [
@@ -15,13 +15,10 @@ export const other = arraySidebar([
         ],
     },
     {
-        text: "友联",
-        icon: "experience",
-        prefix: "friends/",
-        collapsible: false,
-        children: [
-            "site.md",
-        ],
+        text: "友链",
+        icon: "/link-solid.svg",
+        link: "friends/site.md",
+        collapsible: false
     },
     {
         text: "软件",
@@ -39,10 +36,7 @@ export const other = arraySidebar([
     {
         text: "工具",
         icon: "interview",
-        prefix: "tools/",
-        collapsible: true,
-        children: [
-            "overriew.md",
-        ],
+        link: "tools/overriew.md",
+        collapsible: true
     }
 ]);
