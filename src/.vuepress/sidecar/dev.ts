@@ -14,7 +14,7 @@ export const dev = arraySidebar([
     },
     {
         text: "错误笔记",
-        icon: "fa-solid fa-bug",
+        icon: "/bug-solid.svg",
         prefix: "record/",
         collapsible: false,
         children: [

@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const language = arraySidebar([
     {
         text: "JAVA语言",
-        icon: "fa-brands fa-java",
+        icon: "/java-brands.svg",
         prefix: "00-java/",
         collapsible: true,
         children: [
@@ -39,7 +39,7 @@ export const language = arraySidebar([
     },
     {
         text: "前端",
-        icon: "fa-brands fa-npm",
+        icon: "/npm-brands.svg",
         prefix: "01-fronted/",
         collapsible: false,
         children: [
@@ -61,7 +61,7 @@ export const language = arraySidebar([
     },
     {
         text: "Mysql",
-        icon: "fa-solid fa-database",
+        icon: "/database-solid.svg",
         prefix: "05-mysql/",
         collapsible: false,
         children: [
@@ -80,7 +80,7 @@ export const language = arraySidebar([
     },
     {
         text: "Redis",
-        icon: "fa-solid fa-registered",
+        icon: "/registered-solid.svg",
         prefix: "06-redis/",
         collapsible: false,
         children: [

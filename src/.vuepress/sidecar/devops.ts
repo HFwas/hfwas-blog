@@ -88,7 +88,7 @@ export const devops = arraySidebar([
     },
     {
         text: "Nexus",
-        icon: "code",
+        icon: "/Logo_of_Sonatype_Nexus_Repository.svg.png",
         prefix: "05-nexus/",
         collapsible: true,
         children: [

@@ -33,9 +33,6 @@ export default defineUserConfig({
           s.parentNode.insertBefore(hm, s);
         })();`
       ],
-      // ['script', { src: "/lib/fontawesome/brands.min.js" }],
-      // ['script', { src: "/lib/fontawesome/solid.min.js" }],
-      // ['script', { src: "/lib/fontawesome/fontawesome.min.js" }],
   ],
   theme,
 
