@@ -11,6 +11,12 @@ export default defineUserConfig({
   description: "HFwas的博客",
 
   head: [
+      // meta
+      ["meta", { name: "robots", content: "all" }],
+      ["meta", { name: "author", content: "Guide" }],
+      ["meta", { "http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate",},],
+      ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
+      ["meta", { "http-equiv": "Expires", content: "0" }],
       ['meta', {name: 'baidu-site-verification', content: 'codeva-Qr5UPSPuab'}],
       ['meta', {name: '360-site-verification', content: 'bb63045cb42977fa44dba977f095a42f'}],
       ['meta', {name: 'msvalidate.01', content: '8F660B701AFF402CFE968D8155346E6A'}],
@@ -27,9 +33,9 @@ export default defineUserConfig({
           s.parentNode.insertBefore(hm, s);
         })();`
       ],
-      ['script', { src: "/lib/fontawesome/brands.min.js" }],
-      ['script', { src: "/lib/fontawesome/solid.min.js" }],
-      ['script', { src: "/lib/fontawesome/fontawesome.min.js" }],
+      // ['script', { src: "/lib/fontawesome/brands.min.js" }],
+      // ['script', { src: "/lib/fontawesome/solid.min.js" }],
+      // ['script', { src: "/lib/fontawesome/fontawesome.min.js" }],
   ],
   theme,
 
