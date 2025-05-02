@@ -12,6 +12,7 @@ export const other = arraySidebar([
             "02-enable-https.md",
             "readme-prohibition.md",
             "waline.md",
+            "03-pagespeed.md",
         ],
     },
     {

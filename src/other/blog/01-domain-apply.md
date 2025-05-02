@@ -10,7 +10,7 @@ star: true
 
 ## 域名购买
 
-- 访问阿里云域名产品，地址：`https://dc.console.aliyun.com/next/index?spm=5176.8351553.products-recent.ddomain.4ef81991mqNaQQ#/overview`
+- 访问阿里云域名产品，地址：[https://dc.console.aliyun.com/next/index?spm=5176.8351553.products-recent.ddomain.4ef81991mqNaQQ#/overview](https://dc.console.aliyun.com/next/index?spm=5176.8351553.products-recent.ddomain.4ef81991mqNaQQ#/overview)
 - 搜索自己想买的域名地址，查看是否已经有人购买，例如：`hfwas.tech`
 
 ![image-20240324232357501](./images/image-20240324232357501.png)
@@ -21,7 +21,7 @@ star: true
 
 ## 备案服务
 
-- 访问阿里云备案服务，地址：`https://bsn.console.aliyun.com/#/bsnApply/ecs`
+- 访问阿里云备案服务，地址：[https://bsn.console.aliyun.com/#/bsnApply/ecs](https://bsn.console.aliyun.com/#/bsnApply/ecs)
 - 开始ICP备案服务，
 - 需要填写域名和个人的相关信息，填写完毕之后，等待备案完成
 - 需要登录公安域名
@@ -37,7 +37,7 @@ star: true
 
 ## DNS解析
 
-- 阿里云dns解析，访问`https://dns.console.aliyun.com/?spm=5176.5176.console-base.ddns.594e750auYr0Zo#/dns/domainList`
+- 阿里云dns解析，访问[https://dns.console.aliyun.com/?spm=5176.5176.console-base.ddns.594e750auYr0Zo#/dns/domainList](https://dns.console.aliyun.com/?spm=5176.5176.console-base.ddns.594e750auYr0Zo#/dns/domainList)
 
 ![image-20240324233135004](./images/image-20240324233135004.png)
 
