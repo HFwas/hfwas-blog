@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 基于云原生的Devops工程师
-heroImage: /ChatHFwas.png
+heroImage: /ChatHFwas.avif
 heroText: HFwas
 tagline: 基于云原生的Devops工程师 
 actions:

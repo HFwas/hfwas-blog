@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/HFwas_compressed.png",
+  logo: "/ChatHFwas.avif",
 
   repo: "https://github.com/HFwas/hfwas-blog",
 
