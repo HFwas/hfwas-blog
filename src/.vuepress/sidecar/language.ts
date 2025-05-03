@@ -86,6 +86,7 @@ export const language = arraySidebar([
         children: [
             "base-structure.md",
             "persistence.md",
+            "cache-strategy.md",
         ],
     },
 ]);
