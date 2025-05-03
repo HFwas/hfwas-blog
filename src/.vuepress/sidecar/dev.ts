@@ -10,6 +10,8 @@ export const dev = arraySidebar([
             "1-remote-debug.md",
             "2-performance-optimization.md",
             "3-config-ssh-clone.md",
+            "4-mapstruct.md",
+            "5-idea-integration-asprof.md"
         ],
     },
     {
