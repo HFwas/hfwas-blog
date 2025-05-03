@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-04-23
-order: 39
 category:
   - k8s
 tag:

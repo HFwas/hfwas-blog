@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-06-06
-order: 10
 category:
   - nexus
 tag:

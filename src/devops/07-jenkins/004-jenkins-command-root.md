@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-05-17
-order: 5
 category:
   - jenkins
 tag:
