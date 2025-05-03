@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-07-23
-order: 4
 category:
   - hoppscotch
 tag:

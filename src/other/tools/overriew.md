@@ -1,7 +1,5 @@
 ---
 title: 工具集
-icon: pen-to-square
-date: 2024-04-04
 ---
 # 好用工具集合
 ## 目前在用

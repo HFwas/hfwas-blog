@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-05-25
-order: 292
 category:
   - jvm
 tag:

@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-05-01
-order: 6
 category:
   - mybatis
 tag:

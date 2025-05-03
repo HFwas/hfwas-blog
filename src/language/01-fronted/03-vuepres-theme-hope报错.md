@@ -1,7 +1,4 @@
 ---
-icon: pen-to-square
-date: 2024-04-06
-order: 3
 category:
   - vuepress-theme-hope
 tag:
