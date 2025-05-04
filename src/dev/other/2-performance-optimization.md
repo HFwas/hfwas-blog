@@ -28,11 +28,14 @@ for (ProjectConstructionUnitListVO projectConstructionUnitListVO : list) {
                   issuesProviderV2.list(issuesQueryDemandDTO);
                   // 缺陷
                   issuesProviderV2.list(issuesQueryDemandDTO);
+                }
+            }
+}                
 ```
 
 - 第一个优化是使用并行化，将所有的cpu利用起来，修改代码如下：
 
-```
+```java
 for (ProjectConstructionUnitListVO projectConstructionUnitListVO : list) {
             for (Project project : projectList) {
                 String constructionUnit = projectConstructionUnitListVO.getConstructionUnit();
@@ -44,6 +47,9 @@ for (ProjectConstructionUnitListVO projectConstructionUnitListVO : list) {
                   issuesProviderV2.list(issuesQueryDemandDTO);
                   // 缺陷
                   issuesProviderV2.list(issuesQueryDemandDTO);
+                }
+            }
+}                     
 ```
 
 - 这时候可以看到火焰图从下图：
