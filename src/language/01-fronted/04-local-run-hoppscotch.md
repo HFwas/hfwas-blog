@@ -6,7 +6,7 @@ tag:
 star: true
 ---
 
-# 本地编译启动[hoppscotch](https://github.com/hoppscotch/hoppscotch)
+# 前端-本地编译启动[hoppscotch](https://github.com/hoppscotch/hoppscotch)
 
 - 全局安装pnpm，执行`npm install -g pnpm`
 - 克隆代码到本地，访问：https://github.com/hoppscotch/hoppscotch

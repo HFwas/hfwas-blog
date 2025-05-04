@@ -23,7 +23,7 @@ export const other = arraySidebar([
     },
     {
         text: "软件",
-        icon: "code",
+        icon: "/icons8-software-50.png",
         prefix: "softerware/",
         collapsible: false,
         children: [
@@ -36,7 +36,7 @@ export const other = arraySidebar([
     },
     {
         text: "工具",
-        icon: "interview",
+        icon: "/toolbox-solid.svg",
         link: "tools/overriew.md",
         collapsible: true
     }
