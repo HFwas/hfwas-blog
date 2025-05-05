@@ -169,7 +169,6 @@ value3
 | zrank key value                 | 分数从低往高排名，返回value的位次    |
 | zrevrank key value              | 分数从高往低排名，返回value的位次    |
 | zincryby key score value        | 增加key的分数score                   |
-|                                 |                                      |
 
 ### 实际操作
 
