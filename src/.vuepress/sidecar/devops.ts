@@ -137,9 +137,7 @@ export const devops = arraySidebar([
             "03-playbook.md",
             "04-template.md",
             "05-role.md",
-            "20231225-About00.md",
-            "20231227-About01.md",
-            "20231227-About02.md",
+            "90-ansible-operator.md",
         ],
     },
     {
