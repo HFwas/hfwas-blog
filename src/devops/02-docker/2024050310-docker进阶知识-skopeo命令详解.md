@@ -6,7 +6,7 @@ tag:
   - skopeo
 ---
 
-# docker进阶知识-docker镜像同步skopeo
+# Docker进阶知识-docker镜像同步skopeo
 
 ## 参数
 

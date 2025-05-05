@@ -4,7 +4,7 @@ category:
 tag:
   - docker
 ---
-# docker进阶-namespace
+# Docker进阶-namespace
 
 - linux当中的namespace技术，主要作用保证资源的隔离
 

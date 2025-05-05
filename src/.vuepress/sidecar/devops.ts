@@ -40,6 +40,7 @@ export const devops = arraySidebar([
             "2024050310-docker进阶知识-skopeo命令详解.md",
             "2024050510-docker进阶知识-dive命令详解.md",
             "2024052500-docker进阶知识-远程docker.md",
+            "docker99-colima.md",
             "docker01-容器本质.md",
             "docker02-unionfs.md",
             "docker03-进入容器.md",

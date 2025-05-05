@@ -6,7 +6,7 @@ tag:
   - docker
 ---
 
-# docker报错-Error saving credentials: error storing credentials - err: exec: "docker-credential-desktop"
+# Docker报错-Error saving credentials: error storing credentials - err: exec: "docker-credential-desktop"
 
 - 执行`docker login --username=用户名 registry.cn-hangzhou.aliyuncs.com`，控制台报错：
 
