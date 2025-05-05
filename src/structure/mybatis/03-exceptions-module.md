@@ -4,7 +4,7 @@ category:
 tag:
   - mybatis
 ---
-# Mybatis-异常模块
+# MyBatis-异常模块
 
 ## 代码结构
 

@@ -5,7 +5,7 @@ tag:
   - mybatis
 ---
 
-# Mybatis-插件模块
+# MyBatis-插件模块
 
 - 插件模块实际上还是基于Java的jdk代理实现，提供第三方扩展mybatis使用
 - 通常我们使用mybatis的插件模块来扩展sql日志的打印，重写sql，分页插件等
