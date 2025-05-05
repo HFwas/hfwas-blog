@@ -5,9 +5,9 @@ tag:
   - helm
 ---
 
-# 安装使用helm
+# Helm-安装使用
 
-- 访问GitHub helm的发版管理页面，地址：`https://github.com/helm/helm/releases`，下载对应的平台安装包下载即可
+- 访问GitHub helm的发版管理页面，地址：[https://github.com/helm/helm/releases](https://github.com/helm/helm/releases)，下载对应的平台安装包下载即可
 
 ![image-20240427234314229](images/image-20240427234314229.png)
 
