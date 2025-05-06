@@ -12,11 +12,9 @@
 
 - 在sql开头添加
 
-```
+```sql
 SET SESSION SQL_MODE='ALLOW_INVALID_DATES'
 ```
-
-- 
 
 参考链接
 
@@ -26,13 +24,13 @@ SET SESSION SQL_MODE='ALLOW_INVALID_DATES'
 
 - sql文件当中如下：
 
-```
+```sql
 /*!40101 SET character_set_client = @saved_cs_client */;
 ```
 
 - 修改如下：
 
-```
+```sql
 /*!40101 SET character_set_client = 'utf8' */;
 ```
 

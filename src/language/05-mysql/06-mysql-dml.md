@@ -1,8 +1,8 @@
 ---
 category:
-  - mysql
+  - MySql
 tag:
-  - mysql
+  - MySql
 ---
 # MySql-DML语句
 
@@ -16,14 +16,14 @@ tag:
 
   - 创建数据库
 
-  ```
+  ```sql
   CREATE DATABASE stuDB;
   CREATE DATABASE IF NOT EXISTS stuDB;
   ```
 
   - 删除数据库
 
-  ```
+  ```sql
   DROP DATABASE stuDB;
   
   DROP DATABASE IF EXISTS stuDB;
@@ -37,7 +37,7 @@ tag:
 
     - 语法：
 
-    ```
+    ```sql
     CREATE TABLE [IF NOT EXISTS] 表名(
         字段名  字段类型  【字段约束】,
         字段名  字段类型  【字段约束】,
@@ -48,7 +48,7 @@ tag:
 
   - 案例：没有添加约束
 
-  ```
+  ```sql
   CREATE TABLE IF NOT EXISTS stuinfo(
       stuid INT ,
       stuname VARCHAR(20),
@@ -61,7 +61,7 @@ tag:
 
   - 案例：添加约束
 
-  ```
+  ```sql
   DROP TABLE IF EXISTS stuinfo;
   CREATE TABLE IF NOT EXISTS stuinfo(
       stuid INT PRIMARY KEY,#添加了主键约束
@@ -107,7 +107,7 @@ tag:
   - PRIMARY KEY 主键：用于限制该字段值不能重复，设置为主键列的字段默认不能为空，一个表只能有一个主键，当然可以是组合主键
   - UNIQUE 唯一：用于限制该字段值不能重复，字段是否可以为空      一个表可以有几个
 
-  ```
+  ```sql
   主键 ×           1个
   唯一    √             n个
   ```
@@ -123,19 +123,19 @@ tag:
 
 - 语法
 
-```
+```sql
 ALTER TABLE 表名 ADD|MODIFY|CHANGE|DROP COLUMN 字段名 字段类型 【字段约束】;
 ```
 
 - 修改表名
 
-```
+```sql
 ALTER TABLE stuinfo RENAME TO students;
 ```
 
 - 添加字段
 
-```
+```sql
 ALTER TABLE students ADD COLUMN borndate TIMESTAMP NOT NULL;
 
 DESC students;
@@ -143,19 +143,19 @@ DESC students;
 
 - 修改字段名
 
-```
+```sql
 ALTER TABLE students CHANGE COLUMN borndate birthday DATETIME NULL;
 ```
 
 - 修改字段类型
 
-```
+```sql
 ALTER TABLE students MODIFY COLUMN birthday TIMESTAMP ;
 ```
 
 - 删除字段
 
-```
+```sql
 ALTER TABLE students DROP COLUMN birthday;
 
 DESC students;
@@ -163,7 +163,7 @@ DESC students;
 
 ### 删除表 √
 
-```
+```sql
 DROP TABLE IF EXISTS students;
 ```
 
@@ -171,19 +171,19 @@ DROP TABLE IF EXISTS students;
 
 - 仅仅复制表的结构
 
-```
+```sql
 CREATE TABLE newTable2 LIKE major;
 ```
 
 - 复制表的结构+数据
 
-```
+```sql
 CREATE TABLE newTable3 SELECT * FROM girls.`beauty`;
 ```
 
 - 复制employees表中的last_name,department_id,salary字段到新表 emp表，但不复制数据
 
-```
+```sql
 CREATE TABLE emp 
 SELECT last_name,department_id,salary 
 FROM myemployees.`employees`
@@ -237,7 +237,7 @@ WHERE 1=2;
 
 - 插入的值的类型要与列的类型一致或兼容
 
-```
+```sql
 INSERT INTO beauty(id,NAME,sex,borndate,phone,photo,boyfriend_id)
 VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
 ```
@@ -246,14 +246,14 @@ VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
 
   - 方式一：
 
-  ```
+  ```sql
   INSERT INTO beauty(id,NAME,sex,borndate,phone,photo,boyfriend_id)
   VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
   ```
 
   - 方式二：
 
-  ```
+  ```sql
   INSERT INTO beauty(id,NAME,sex,phone)
   VALUES(15,'娜扎','女','1388888888');
   ```
@@ -262,21 +262,21 @@ VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
 
 - 列的顺序是否可以调换
 
-```
+```sql
 INSERT INTO beauty(NAME,sex,id,phone)
 VALUES('蒋欣','女',16,'110');
 ```
 
 - 列数和值的个数必须一致
 
-```
+```sql
 INSERT INTO beauty(NAME,sex,id,phone)
 VALUES('关晓彤','女',17,'110');
 ```
 
 - 可以省略列名，默认所有列，而且列的顺序和表中列的顺序一致
 
-```
+```sql
 INSERT INTO beauty
 VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 ```
@@ -305,7 +305,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
   - 修改beauty表中姓唐的女神的电话为13899888899
 
-  ```
+  ```sql
   UPDATE beauty SET phone = '13899888899'
   WHERE NAME LIKE '唐%';
 
@@ -313,7 +313,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
   - 修改张无忌的女朋友的手机号为114
 
-  ```
+  ```sql
   UPDATE boys bo
   INNER JOIN beauty b ON bo.`id`=b.`boyfriend_id`
   SET b.`phone`='119',bo.`userCP`=1000
@@ -322,7 +322,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
   - 修改没有男朋友的女神的男朋友编号都为2号
 
-  ```
+  ```sql
   UPDATE boys bo
   RIGHT JOIN beauty b ON bo.`id`=b.`boyfriend_id`
   SET b.`boyfriend_id`=2
@@ -335,7 +335,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
 - 
 
-```
+```sql
 
 ```
 
@@ -351,7 +351,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
     - sql92语法：
 
-    ```
+    ```sql
     delete 表1的别名,表2的别名
     from 表1 别名,表2 别名
     where 连接条件
@@ -384,14 +384,14 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
 - #1.单表的删除     删除张无忌的女朋友的信息
 
-```
+```sql
 DELETE FROM beauty WHERE phone LIKE '%9';
 SELECT * FROM beauty;
 ```
 
 - 多表的删除 - 删除张无忌的女朋友的信息
 
-```
+```sql
 DELETE b
 FROM beauty b
 INNER JOIN boys bo ON b.`boyfriend_id` = bo.`id`
@@ -400,7 +400,7 @@ WHERE bo.`boyName`='张无忌';
 
 - 删除黄晓明的信息以及他女朋友的信息
 
-```
+```sql
 DELETE b,bo
 FROM beauty b
 INNER JOIN boys bo ON b.`boyfriend_id`=bo.`id`

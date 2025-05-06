@@ -2,11 +2,11 @@
 
 Redis的基本数据结构分为五种：
 
-- string
-- list
-- set
-- sorted set
-- hash
+- String
+- List
+- Set
+- Sorted Set
+- Hash
 
 这几种数据结构背后的实现有：
 
@@ -20,11 +20,11 @@ Redis的基本数据结构分为五种：
 
 | String | List                        | Set    | Sorted set       | hash              |
 | ------ | --------------------------- | ------ | ---------------- | ----------------- |
-| SDS    | LinkedList/ZipLIst/ListPack | intset | ziplist/skiplist | ZipList/HashTable |
+| SDS    | LinkedList/ZipLIst/ListPack | intset | Ziplist/Skiplist | ZipList/HashTable |
 
-## 字符串(string)
+## 字符串(String)
 
-redis当中最常使用的数据类型就是string，他可以存储字符串，序列化的对象数据，图片的二进制数据等等，
+Redis当中最常使用的数据类型就是String，他可以存储字符串，序列化的对象数据，图片的二进制数据等等，
 
 ![](images/image-20250504141229869.png)
 
@@ -55,7 +55,7 @@ system.sms.send
 
 ### 应用场景
 
-- 常用的存储序列化后的对象，分布式session，token，当前登录用户信息等等
+- 常用的存储序列化后的对象，分布式Session，Token，当前登录用户信息等等
 
 ## 列表(list)
 
@@ -96,7 +96,7 @@ value1
 - 最新文章，最新关注，最近关注等等，
 - 消息队列，使用lpush,brpop，生产者使用lpush从左侧插入消息，多个消费者使用brpop从右侧获取消息消费
 
-## 集合(set)
+## 集合(Set)
 
 可以用来保存多个不重复的字符串，元素且是无序的，不能通过下标来获得元素信息，可以用来实现不同用户在某一个范围的交集，并集，差集效果，比如关注公众号共同关注人数等等
 
@@ -152,7 +152,7 @@ value3
 
 ![image-20250504190734815](images/image-20250504190734815.png)
 
-## 有序集合(sorted set)
+## 有序集合(Sorted Set)
 
 有序集合在集合的基础上，保留了没有重复数据，增加了数据有序的特性，增加了score参数来作为不同value排序的依据，注意：有序集合当中元素内容value不可以重复，但是score可以重复
 
@@ -201,7 +201,7 @@ value3
 - 排行榜，
 - 比如微信运动的排行榜，按照播放量排行榜
 
-## 哈希(hash)
+## 哈希(Hash)
 
 ### 实际操作
 
