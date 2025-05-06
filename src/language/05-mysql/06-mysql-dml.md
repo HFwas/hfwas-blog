@@ -29,8 +29,6 @@ tag:
   DROP DATABASE IF EXISTS stuDB;
   ```
 
-  - 
-
 - 表的管理
 
   - 创建表
@@ -45,9 +43,10 @@ tag:
         字段名  字段类型  【字段约束】,
         字段名  字段类型  【字段约束】
     );
-
+    ```
+  
   - 案例：没有添加约束
-
+  
   ```sql
   CREATE TABLE IF NOT EXISTS stuinfo(
       stuid INT ,
@@ -55,7 +54,6 @@ tag:
       stugender CHAR(1),
       email VARCHAR(20),
       borndate DATETIME
-  
   );
   ```
 
@@ -71,12 +69,9 @@ tag:
       age INT CHECK( age BETWEEN 0 AND 100),#添加了检查约束，mysql不支持
       majorid INT,
       CONSTRAINT fk_stuinfo_major FOREIGN KEY (majorid) REFERENCES major(id)#添加了外键约束
-  
   );
   ```
-
-  - 
-
+  
 - 数据类型：
 
   - 整型
@@ -95,7 +90,6 @@ tag:
     - DATE TIME  DATETIME TIMESTAMP
   - 二进制型
     - BLOB 存储图片数据
-  - 
 
 ## 常见约束
 
@@ -190,8 +184,6 @@ FROM myemployees.`employees`
 WHERE 1=2;
 ```
 
-
-
 ## DML语言
 
 - 数据操作语言：
@@ -229,10 +221,6 @@ WHERE 1=2;
         SELECT id,boyname,'1234567'
         FROM boys WHERE id<3;
 
-    - 
-
-  - 
-
 ### 示例
 
 - 插入的值的类型要与列的类型一致或兼容
@@ -257,8 +245,6 @@ VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
   INSERT INTO beauty(id,NAME,sex,phone)
   VALUES(15,'娜扎','女','1388888888');
   ```
-
-  - 
 
 - 列的顺序是否可以调换
 
@@ -288,6 +274,7 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
     update 表名
     set 列=新值,列=新值,...
     where 筛选条件;
+  
 - 修改多表的记录【补充】语法：
   - sql92语法：
     update 表1 别名,表2 别名
@@ -331,13 +318,6 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
   SELECT * FROM boys;
   ```
 
-  - 
-
-- 
-
-```sql
-
-```
 
 ### 删除语句
 
@@ -377,9 +357,6 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
   - truncate删除没有返回值，delete删除有返回值
   - truncate删除不能回滚，delete删除可以回滚.
 
-- 
-  
-
 ### 示例
 
 - #1.单表的删除     删除张无忌的女朋友的信息
@@ -406,8 +383,6 @@ FROM beauty b
 INNER JOIN boys bo ON b.`boyfriend_id`=bo.`id`
 WHERE bo.`boyName`='黄晓明';
 ```
-
-- 
 
 
 
