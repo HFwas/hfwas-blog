@@ -152,38 +152,38 @@ export default hopeTheme({
 
     // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
     pwa: {
-      favicon: "/HFwas_compressed.png",
+      favicon: "/ChatHFwas.avif",
       cacheHTML: true,
       appendBase: true,
       apple: {
-        icon: "/ChatHFwas.png",
+        icon: "/ChatHFwas.avif",
         statusBarColor: "black",
       },
       msTile: {
-        image: "/ChatHFwas.png",
+        image: "/ChatHFwas.avif",
         color: "#ffffff",
       },
       manifest: {
         icons: [
           {
-            src: "/ChatHFwas.png",
+            src: "/ChatHFwas.avif",
             sizes: "512x512",
             purpose: "maskable",
             type: "image/png",
           },
           {
-            src: "/ChatHFwas.png",
+            src: "/ChatHFwas.avif",
             sizes: "192x192",
             purpose: "maskable",
             type: "image/png",
           },
           {
-            src: "/ChatHFwas.png",
+            src: "/ChatHFwas.avif",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/ChatHFwas.png",
+            src: "/ChatHFwas.avif",
             sizes: "192x192",
             type: "image/png",
           },
@@ -195,7 +195,7 @@ export default hopeTheme({
             url: "/demo/",
             icons: [
               {
-                src: "/ChatHFwas.png",
+                src: "/ChatHFwas.avif",
                 sizes: "192x192",
                 purpose: "maskable",
                 type: "image/png",
