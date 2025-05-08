@@ -10,23 +10,23 @@ tag:
 
 ## WAL技术
 
-- 在mysql当中如果每一次更新都要写磁盘，然后磁盘也要找到对应的那条更新的记录，然后再更新，整个过程当中IO技术，查找成本都比较高，然后使用到WAL技术，别名是Write-Ahead Logging，关键点是先写日志，再写磁盘。
-- 详细介绍：当有数据更新时，innodb引擎就会先吧记录写到redo log当中，并且更新到内存当中，这个时候更新就算完成了。同时innodb引擎会在合适的时候，将这个操作就更新到磁盘当中，而这个更新往往会在系统比较清闲的时候。
+- 在 MySql 当中如果每一次更新都要写磁盘，然后磁盘也要找到对应的那条更新的记录，然后再更新，整个过程当中IO技术，查找成本都比较高，然后使用到 WAL 技术，别名是 Write-Ahead Logging，关键点是先写日志，再写磁盘。
+- 详细介绍：当有数据更新时，innodb引擎就会先把记录写到redo log当中，并且更新到内存当中，这个时候更新就算完成了。同时 innodb 引擎会在合适的时候，将这个操作更新到磁盘当中，而这个更新往往会在系统比较清闲的时候。
 
 ## 日志模块
 
-- redo-log和binlog 日志不同点：
-  - redo log是innodb引擎特有的，binlog是mysql的server层实现的，所有引擎都可以实现
-  - redo log是物理日志，记录的是在某个数据页做了什么修改。bin log是逻辑日志，记录的是这个语句的原始逻辑，比如：给id=2这一行的c字段加1
+- redo-log 和 binlog 日志不同点：
+  - redo log 是 innodb 引擎特有的，binlog 是 mysql 的 server 层实现的，所有引擎都可以实现
+  - redo log 是物理日志，记录的是在某个数据页做了什么修改。bin log是逻辑日志，记录的是这个语句的原始逻辑，比如：给id=2这一行的c字段加1
   - redo log是循环写的，空间固定会写完。binlog 是可以追加写入的，追加写是指binlog 文件写到一定大小之后会切换到下一个，并不会覆盖以前的日志。
 
 ### redo log
 
-- 是innodb引擎特有的日志。大小是固定的，比如：可以配置四个文件，每个文件大小是1gb，从头开始写记录，写到末尾又会到开头循环写。如图：
+- 是 innodb 引擎特有的日志。大小是固定的，比如：可以配置四个文件，每个文件大小是1gb，从头开始写记录，写到末尾又会到开头循环写。如图：
 
-- Write poc 是当前记录的位置，一边写一边后移，写到第三号文件末尾后就会到0号文件开头。check point 是当前要插除的位置，也是往后推移并且循环的，擦除记录前要把记录更新到数据文件。
+- Write poc 是当前记录的位置，一边写一边后移，写到第三号文件末尾后就会到0号文件开头。check point 是当前要擦除的位置，也是往后推移并且循环的，擦除记录前要把记录更新到数据文件。
 - write doc和check point之间的是粉板上还空着的部分，可以用来记录新的操作。如果write poc 追上check point表示粉板满了，这时候不能再执行新的更新，得停下来先擦除掉一些记录，吧chek point推进一下。
-- 有了redo log， inn odb就可以保证即使数据库发生异常重启，之前提交的记录都不会丢失，这个能称为crash-safe。
+- 有了redo log， innodb 就可以保证即使数据库发生异常重启，之前提交的记录都不会丢失，这个能称为crash-safe。
 
 ![Snipaste_2023-11-18_22-33-32](./images/Snipaste_2023-11-18_22-33-32.png)
 
@@ -34,7 +34,7 @@ tag:
 
 - server层的日志。被称为归档日志。
 
-- Mysql自带的引擎是MyISAM引擎，但是MyISAM当中没有crash-safe的能力，binlog日志只能用于归档。innodb是另外一家公司以插件的形式引入mysql的，既然只依靠binlog是没有crash-safe能力，所以innod b使用另外一套日志系统，也就是redo-log来实现crash-safe能力。
+- Mysql自带的引擎是MyISAM引擎，但是MyISAM当中没有crash-safe的能力，binlog 日志只能用于归档。innodb是另外一家公司以插件的形式引入mysql的，既然只依靠binlog是没有crash-safe能力，所以innodb 使用另外一套日志系统，也就是redo-log来实现crash-safe能力。
 
 ## 更新语句执行
 
