@@ -12,20 +12,29 @@ category:
 
 ## Java
 
-- 集合框架，包括相关的源码解析
-- 并发，
+- 集合框架
+- 并发
 - JVM
-
-- 
 
 ## 前端
 
 - vue
 
-- nginx相关知识
+- Nginx 相关知识
 - 其他前端相关的知识
 
-## nginx
+## Nginx
 
-- nginx基础知识
+- Nginx 基础知识
 
+## MySql
+
+- MySql 常见 Sql 语句
+- MySql 索引
+
+## Redis
+
+- 基本的数据结构
+- 持久化
+- 内存管理
+- Redis 集群

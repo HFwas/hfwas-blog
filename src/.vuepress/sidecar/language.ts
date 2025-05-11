@@ -103,6 +103,8 @@ export const language = arraySidebar([
             "redis-base.md",
             "persistence.md",
             "cache-strategy.md",
+            "redis-lock-reason.md",
+            "redis-memory-manage.md"
         ],
     },
 ]);
