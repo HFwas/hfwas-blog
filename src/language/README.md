@@ -18,8 +18,9 @@ category:
 
 ## 前端
 
-- vue
-
+- Vue
+- React
+- Next.JS
 - Nginx 相关知识
 - 其他前端相关的知识
 

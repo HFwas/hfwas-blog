@@ -5,6 +5,7 @@
 Redis常见的命令执行速度都很快，算法复杂度基本都在O(1)级别，但是也有一些算法复杂度在O(n)级别，再加上数据量过大的情况，就会导致很慢，比如
 
 - hash 结构的 hgetall 命令
+- `keys *`命令
 
 排查：
 
@@ -21,7 +22,7 @@ cmdstat_info:calls=4,usec=13397,usec_per_call=3349.25,rejected_calls=0,failed_ca
 cmdstat_ttl:calls=8,usec=987,usec_per_call=123.38,rejected_calls=0,failed_calls=0
 ```
 
-- 单个 key 当中存储了过大的数据，执行命令会阻塞当前主线程，发现大对象：
+- 单个 key 当中存储了过大的数据，执行命令会阻塞当前主线程，排查发现大对象：
 
   - Redis 提供了命令`redis-cli -h host -p port bigkeys` 来查询大对象，
 

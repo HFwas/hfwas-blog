@@ -1,6 +1,6 @@
 # MySql-执行计划
 
-MySql给我们提供了 explain 命令来分析 Sql 语句的性能，
+MySql 给我们提供了 explain 命令来分析 Sql 语句的性能，
 
 ## 分析步骤
 
@@ -39,8 +39,6 @@ explain 返回的结果有12列，分别是：
 | SUBQUERY     | 子查询中的SELECT                                             |
 | DERIVED      | 表示包含在 From 子句中的 Select 查询                         |
 | UNION RESULT | union的结果,此时id为NULL                                     |
-
-
 
 ### table
 

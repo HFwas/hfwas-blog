@@ -46,7 +46,7 @@ appendonly yes
 
 ### 工作流程
 
-- 命令追加append：客户端的写操作都会追加到aof_buf缓冲区当中，等到aof_buf缓冲区满了
+- 命令追加append：客户端的写操作都会追加到aof_buf缓冲区当中
 - 文件写入：系统调用了write函数将aof_buf缓冲区数据写入到内存缓冲区里面
 - 文件同步fsync：根据配置的fsync选项同步aof_buf缓冲区数据到磁盘文件，这一步系统调用fsync函数，
 

@@ -19,8 +19,8 @@ Redis的基本数据结构分为五种：
 他们的对应关系是：
 
 | String | List                        | Set              | Sorted set       | Hash              |
-| ------ | --------------------------- | ---------------- | ---------------- | ----------------- |
-| SDS    | LinkedList/ZipLIst/ListPack | Intset/HashTable | Ziplist/Skiplist | ZipList/HashTable |
+| ------ |-----------------------------| ---------------- | ---------------- | ----------------- |
+| SDS    | LinkedList/ZipList/ListPack | Intset/HashTable | ZipList/SkipList | ZipList/HashTable |
 
 ## 字符串(String)
 
