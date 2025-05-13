@@ -11,7 +11,7 @@
 
 |          | redis                                                        | Memchached                   |
 | -------- | ------------------------------------------------------------ | ---------------------------- |
-| 数据类型 | 提供了string,list,set,sorted set, hash,bitmap,hyper,geo等类型 | 捡                           |
+| 数据类型 | 提供了string,list,set,sorted set, hash,bitmap,hyperloglog,geo等类型 | 捡                           |
 | 命令     | 每种数据类型都提供了对应的命令                               | 创建，删除，读取，更新等命令 |
 | 附加功能 | 发布订阅，stream，持久化等                                   |                              |
 

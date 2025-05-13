@@ -17,7 +17,7 @@ tag:
     - 执行器等
   - 存储引擎
     - 负责数据的存储和提取
-    - 支持innodb，misaim，memory等多个存储引擎
+    - 支持 InnoDB，MyISAM，MEMORY 等多个存储引擎
 
 ![Snipaste_2023-10-12_23-32-49](./images/Snipaste_2023-10-12_23-32-49.png)
 

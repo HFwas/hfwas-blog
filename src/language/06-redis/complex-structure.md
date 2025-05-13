@@ -15,11 +15,11 @@
 > - Efficient set representations for cases where the members of a set correspond to the integers 0-N.
 > - Object permissions, where each bit represents a particular permission, similar to the way that file systems store permissions.
 
-位图不是一种实际的数据类型，而是在String类型上定义的一组面向位的操作，它被视为位向量。由于字符串是二进制安全的blob，其最大长度为512 MB，因此它们适合设置最多2^32个不同的位。您可以对一个或多个字符串执行按位操作。
+位图不是一种实际的数据类型，而是在 String 类型上定义的一组面向位的操作，它被视为位向量。由于字符串是二进制安全的 blob，其最大长度为512 MB，因此它们适合设置最多2^32个不同的位。您可以对一个或多个字符串执行按位操作。
 
-Bitmap是一个特殊的String类型，可以对其设置对应offset位置值为value，但是Bitmap的value存储的是二进制位，只有0或者1。
+Bitmap 是一个特殊的 String 类型，可以对其设置对应 offset 位置值为 value，但是 Bitmap 的 value 存储的是二进制位，只有0或者1。
 
-我们知道一个byte字节占用8个bit位，Bitmap当中的value只使用了一个bit位，这样可以极大的节省存储空间。
+我们知道一个 byte 字节占用8个 bit 位，Bitmap 当中的 value 只使用了一个 bit 位，这样可以极大的节省存储空间。
 
 ![](images/image-20250504195210883.png)
 
@@ -44,7 +44,7 @@ Bitmap是一个特殊的String类型，可以对其设置对应offset位置值�
 
 ### 应用场景
 
-- 网站上用户当天是否签到，是否分享视频文章，这种是否状态的信息就很适合使用Bitmap来存储
+- 网站上用户当天是否签到，是否分享视频文章，这种是否状态的信息就很适合使用 Bitmap 来存储
 
 ## HyperLogLog
 
@@ -52,9 +52,9 @@ Bitmap是一个特殊的String类型，可以对其设置对应offset位置值�
 
 > The [Redis HyperLogLog](https://redis.io/docs/latest/develop/data-types/probabilistic/hyperloglogs/) data structures provide probabilistic estimates of the cardinality (i.e., number of elements) of large sets.
 
-Redis HyperLogLog数据结构提供了大集合的基数（即元素数量）的概率估计，是一种概率数据结构，用于估计集合的基数。
+Redis HyperLogLog 数据结构提供了大集合的基数（即元素数量）的概率估计，是一种概率数据结构，用于估计集合的基数。
 
-作为一种概率数据结构，HyperLogLog以完美的准确性换取有效的空间利用。Redis HyperLogLog实现最多使用12 KB，标准误差为0.81%，可以以极小的内存空间完成独立总数的统计
+作为一种概率数据结构，HyperLogLog 以完美的准确性换取有效的空间利用。Redis HyperLogLog 实现最多使用12 KB，标准误差为0.81%，可以以极小的内存空间完成独立总数的统计
 
 ### 常用命令
 
@@ -90,7 +90,7 @@ OK
 
 ## GEO
 
-GEO是一种支持存储和查询地理信息位置的数据结构，基于sorted set实现，
+GEO 是一种支持存储和查询地理信息位置的数据结构，基于 sorted set 实现，
 
 ### 常用命令
 

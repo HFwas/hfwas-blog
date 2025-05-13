@@ -2,14 +2,14 @@
 
 ## O(N)命令
 
-Redis常见的命令执行速度都很快，算法复杂度基本都在O(1)级别，但是也有一些算法复杂度在O(n)级别，再加上数据量过大的情况，就会导致很慢，比如
+Redis 常见的命令执行速度都很快，算法复杂度基本都在 O(1) 级别，但是也有一些算法复杂度在 O(n) 级别，再加上数据量过大的情况，就会导致很慢，比如
 
 - hash 结构的 hgetall 命令
 - `keys *`命令
 
 排查：
 
-- 获取慢查询：Redis 提供了`slowlog get {n}`命令来获取最近的n条慢查询命令，默认会将执行超过10ms的命令记录到队列当中，
+- 获取慢查询：Redis 提供了`slowlog get {n}`命令来获取最近的 n 条慢查询命令，默认会将执行超过10ms的命令记录到队列当中，
 - 可以通过`info commandstats`命令来分析命令的不同执行时间，可以通过查看字段 usec_per_call 平均耗时来排查，单位是微秒
 
 ```bash
@@ -41,11 +41,11 @@ cmdstat_ttl:calls=8,usec=987,usec_per_call=123.38,rejected_calls=0,failed_calls=
 
 - 在之前的 Redis 持久化文档当中，Redis 持久化有两种：rdb 和 aof 
 - rdb 持久化会 fork 主线程来进行数据的备份，如果 fork 操作时间过长，肯定会导致主线程的阻塞，可以执行`info stats`命令返回的`latest_fork_usec`参数来优化
-- aof 持久化也会 fork 主线程来进行数据备份，如果配置`appendonlyfsync everysec`会每秒对aof文件执行fsync操作，如果磁盘压力过大， Redis发现上次执行 fsync 的时间过长，为了安全会阻塞后台线程 fsync 直到完成。可以通过`info persistence`命令返回当中的`aof_delayed_fsync`指标来优化解决。
+- aof 持久化也会 fork 主线程来进行数据备份，如果配置`appendonlyfsync everysec`会每秒对 aof 文件执行 fsync 操作，如果磁盘压力过大， Redis 发现上次执行 fsync 的时间过长，为了安全会阻塞后台线程 fsync 直到完成。可以通过`info persistence`命令返回当中的`aof_delayed_fsync`指标来优化解决。
 
 # cpu竞争
 
-Redis是典型的 cpu 密集型应用，不建议和其他多核 cpu 密集型服务部署在一起。
+Redis 是典型的 cpu 密集型应用，不建议和其他多核 cpu 密集型服务部署在一起。
 
 排查：
 

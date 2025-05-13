@@ -1,4 +1,4 @@
-# Mysql-存储引擎
+# MySql-存储引擎
 
 执行`select version();`查看当前 mysql 版本，我本地版本是5.7.41
 
@@ -8,16 +8,16 @@
 - 查询缓存
 - 分析器
 - 优化器
-- 执行期
+- 执行器
 - 存储引擎
 
 ## 存储引擎
 
-- 执行`show engines;`查看当前 mysql 的所有引擎列表
+- 执行`show engines;`查看当前 MySql 的所有引擎列表
 
 ![image-20250512210428597](images/image-20250512210428597.png)
 
-- 查看当前 mysql 使用的存储引擎，执行`show variables like '%storage_engine%';`查看，可以看到 5.7.41版本的 mysql 默认支持 InnoDB
+- 查看当前 MySql 使用的存储引擎，执行`show variables like '%storage_engine%';`查看，可以看到 5.7.41版本的 MySql 默认支持 InnoDB
 
 ![image-20250512210553392](images/image-20250512210553392.png)
 
