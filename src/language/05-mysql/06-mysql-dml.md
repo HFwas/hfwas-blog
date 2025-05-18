@@ -106,14 +106,13 @@ tag:
   唯一    √             n个
   ```
 
-  - CHECK检查：用于限制该字段值必须满足指定条件
-    CHECK(age BETWEEN 1 AND 100)
+  - CHECK检查：用于限制该字段值必须满足指定条件，例如：CHECK(age BETWEEN 1 AND 100)
   - FOREIGN KEY 外键:用于限制两个表的关系,要求外键列的值必须来自于主表的关联列
         要求：    
     - ①主表的关联列和从表的关联列的类型必须一致，意思一样，名称无要求
     - ②主表的关联列要求必须是主键
 
-### 修改表[了解]
+### 修改表
 
 - 语法
 
@@ -155,13 +154,13 @@ ALTER TABLE students DROP COLUMN birthday;
 DESC students;
 ```
 
-### 删除表 √
+### 删除表
 
 ```sql
 DROP TABLE IF EXISTS students;
 ```
 
-### 复制表√
+### 复制表
 
 - 仅仅复制表的结构
 
@@ -196,30 +195,38 @@ WHERE 1=2;
 
   - 方式一：经典的插入
 
-    - 语法：insert into 表名(列名,...) values(值1,...);
+```sql
+语法：insert into 表名(列名,...) values(值1,...);
+```
 
   - 方式二：
 
     - 语法：insert into 表名 set 列名=值,列名=值,...
-    - INSERT INTO beauty      SET id=19,NAME='刘涛',phone='999';
+```sql
+INSERT INTO beauty      SET id=19,NAME='刘涛',phone='999';
+```
 
   - 对比：
 
     - 方式一支持插入多行,方式二不支持
 
-      - INSERT INTO beauty
-        VALUES(23,'唐艺昕1','女','1990-4-23','1898888888',NULL,2)
-        ,(24,'唐艺昕2','女','1990-4-23','1898888888',NULL,2)
-        ,(25,'唐艺昕3','女','1990-4-23','1898888888',NULL,2);
+```sql
+INSERT INTO beauty
+VALUES(23,'唐艺昕1','女','1990-4-23','1898888888',NULL,2)
+,(24,'唐艺昕2','女','1990-4-23','1898888888',NULL,2)
+,(25,'唐艺昕3','女','1990-4-23','1898888888',NULL,2);
+```
 
     - 方式一支持子查询，方式二不支持
 
-      - INSERT INTO beauty(id,NAME,phone)
-        SELECT 26,'宋茜','11809866';
+```sql
+INSERT INTO beauty(id,NAME,phone)
+SELECT 26,'宋茜','11809866';
 
-        INSERT INTO beauty(id,NAME,phone)
-        SELECT id,boyname,'1234567'
-        FROM boys WHERE id<3;
+INSERT INTO beauty(id,NAME,phone)
+SELECT id,boyname,'1234567'
+FROM boys WHERE id<3;
+```
 
 ### 示例
 
@@ -234,10 +241,10 @@ VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
 
   - 方式一：
 
-  ```sql
+```sql
   INSERT INTO beauty(id,NAME,sex,borndate,phone,photo,boyfriend_id)
   VALUES(13,'唐艺昕','女','1990-4-23','1898888888',NULL,2);
-  ```
+```
 
   - 方式二：
 
@@ -292,9 +299,10 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
   - 修改beauty表中姓唐的女神的电话为13899888899
 
-  ```sql
+```sql
   UPDATE beauty SET phone = '13899888899'
   WHERE NAME LIKE '唐%';
+```
 
 - 修改多表的记录
 
@@ -309,14 +317,14 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
 
   - 修改没有男朋友的女神的男朋友编号都为2号
 
-  ```sql
+```sql
   UPDATE boys bo
   RIGHT JOIN beauty b ON bo.`id`=b.`boyfriend_id`
   SET b.`boyfriend_id`=2
   WHERE bo.`id` IS NULL;
   
   SELECT * FROM boys;
-  ```
+```
 
 
 ### 删除语句
@@ -330,26 +338,27 @@ VALUES(18,'张飞','男',NULL,'119',NULL,NULL);
   - 多表的删除【补充】
 
     - sql92语法：
-
-    ```sql
-    delete 表1的别名,表2的别名
-    from 表1 别名,表2 别名
-    where 连接条件
-    and 筛选条件;
+    
     ```
-
+    delete 表1的别名,表2的别名
+        from 表1 别名,表2 别名
+        where 连接条件
+        and 筛选条件;
+    ```
+    
     - sql99语法：
 
-      delete 表1的别名,表2的别名
+ ```sql
+ delete 表1的别名,表2的别名
       from 表1 别名
       inner|left|right join 表2 别名 on 连接条件
       where 筛选条件;
-
+ ```
 - 方式二：truncate
 
   - 语法：truncate table 表名
 
-- delete pk truncate【面试题★】
+- delete pk truncate
 
   - delete 可以加where 条件，truncate不能加
   - truncate删除，效率高一丢丢

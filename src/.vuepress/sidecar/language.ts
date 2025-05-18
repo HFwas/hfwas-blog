@@ -89,6 +89,8 @@ export const language = arraySidebar([
             "102-mysql-how-to-execute-update-sql.md",
             "103-transanction.md",
             "104-index.md",
+            "106-mysql-execuation-plan.md",
+            "107-mysql-engines.md",
             "20241008-mysql-errors.md",
         ],
     },
@@ -104,7 +106,9 @@ export const language = arraySidebar([
             "persistence.md",
             "cache-strategy.md",
             "redis-lock-reason.md",
-            "redis-memory-manage.md"
+            "redis-memory-manage.md",
+            "redis-cluster.md",
+            "redis-sentinel.md"
         ],
     },
 ]);
