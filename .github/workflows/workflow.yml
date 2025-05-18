@@ -1,0 +1,46 @@
+name: Deploy VuePress Site
+
+on:
+  push:
+    branches:
+      - master  # 监听 master 分支的推送事件，可根据需要修改为其他分支
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # 检出代码到 runner
+        with:
+          fetch-depth: 0  # 获取完整的提交历史
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4  # 设置 Node.js 环境
+        with:
+          node-version: '20'  # 使用 Node.js 18.x 版本
+
+      - name: Cache dependencies
+        uses: actions/cache@v4  # 设置依赖缓存
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm ci  # 使用 ci 命令确保依赖安装一致性
+
+      - name: Build VuePress site
+        run: npm run docs:build  # 执行项目的构建命令
+
+      - name: Deploy to server
+        uses: easingthemes/ssh-deploy@v3  # 使用 SSH 部署 Action
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 从 GitHub 密钥库获取 SSH 私钥
+          ARGS: "-avz --delete"  # rsync 参数，确保同步并删除目标目录中不存在的文件
+          SOURCE: "src/.vuepress/dist/"  # 构建输出目录
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}  # 远程主机地址
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}  # 远程主机用户名
+          TARGET: ${{ secrets.REMOTE_TARGET }}  # 远程目标目录
+          EXCLUDE: ".git*, node_modules"  # 排除的文件和目录
