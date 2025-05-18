@@ -14,16 +14,8 @@
   - page number：页号
   - data：该条 redo log的数据
 
-
-
 ## undo log
 
-
-
-
-
 ## bin log
-
-
 
 ## slow log
