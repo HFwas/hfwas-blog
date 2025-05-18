@@ -2,8 +2,6 @@
 
 ## redo log
 
-- 
-
 ### 结构
 
 - redo log日志结构如下图所示：
@@ -15,7 +13,6 @@
   - space id：表空间ID
   - page number：页号
   - data：该条 redo log的数据
-- 
 
 
 

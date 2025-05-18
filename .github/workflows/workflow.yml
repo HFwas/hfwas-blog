@@ -38,7 +38,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v3  # 使用 SSH 部署 Action
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 从 GitHub 密钥库获取 SSH 私钥
-          ARGS: "-avz --delete"  # rsync 参数，确保同步并删除目标目录中不存在的文件
+          ARGS: "-avzc --delete"  # rsync 参数，确保同步并删除目标目录中不存在的文件
           SOURCE: "src/.vuepress/dist/"  # 构建输出目录
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}  # 远程主机地址
           REMOTE_USER: ${{ secrets.REMOTE_USER }}  # 远程主机用户名
