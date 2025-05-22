@@ -46,6 +46,7 @@ export const language = arraySidebar([
                 prefix: "JUC/",
                 collapsible: true,
                 children: [
+                    "3-thread-pool.md",
                     "2024052600-juc-system-pv.md",
                 ],
             },

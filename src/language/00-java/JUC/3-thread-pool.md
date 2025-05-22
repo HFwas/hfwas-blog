@@ -70,13 +70,15 @@ public ThreadPoolExecutor(int corePoolSize,
 
 ## Executors 工具类
 
-- 提供了几种常见的内置线程池
+提供了几种常见的内置线程池：
+
 - newFixedThreadPool：创建固定线程数量的线程池
 - newSingleThreadExecutor：创建单一线程的线程池
 - newCachedThreadPool：创建缓存的线程池
 - newScheduledThreadPool：创建调度的线程池
 
-newFixedThreadPool
+### newFixedThreadPool
+
 - 可以看到 newFixedThreadPool 底层还是通过 ThreadPoolExecutor 来创建线程池的，
 - 将 corePoolSize 和 maximumPoolSize 设置成一样的值 nThreads
 - 空闲线程存活时间设置成 0L ，单位是 MILLISECONDS
@@ -94,7 +96,8 @@ public static ExecutorService newFixedThreadPool(int nThreads) {
     }
 ```
 
-newCachedThreadPool
+### newCachedThreadPool
+
 - 可以看到 newCachedThreadPool 底层还是通过 ThreadPoolExecutor 来创建线程池的，
 - 将 corePoolSize 设置为 0，maximumPoolSize 设置成 Integer.MAX_VALUE
 - 空闲线程存活时间设置成 60L ，单位是 SECONDS
@@ -107,19 +110,15 @@ public SynchronousQueue() {
   }
 ```
 
-newScheduledThreadPool
+### newScheduledThreadPool
+
 - 可以看到 newCachedThreadPool 底层还是通过 ThreadPoolExecutor 来创建线程池的，
 - corePoolSize 根据传入的参数 corePoolSize 决定，maximumPoolSize 设置成 Integer.MAX_VALUE
 - 空闲线程存活时间设置成 DEFAULT_KEEPALIVE_MILLIS = 10L ，单位是 MILLISECONDS
 - 任务队列使用的是：DelayedWorkQueue，
-- 
 
 ### 任务队列
 - newFixedThreadPool/newSingleThreadExecutor 提供的任务队列是阻塞队列 LinkedBlockingQueue，默认容量大小为：Integer.MAX_VALUE
 - newCachedThreadPool 提供的任务队列是同步队列：SynchronousQueue，
 - newScheduledThreadPool 提供的任务队列是延时工作队列：DelayedWorkQueue，初始化容量是：INITIAL_CAPACITY = 16
-
-## 线程池原理
-
-- 
 
