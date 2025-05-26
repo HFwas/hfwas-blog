@@ -4,7 +4,7 @@ category:
 tag:
   - k8s
 ---
-# nginx-controller对外暴露端口
+# K8s运维操作-nginx-controller对外暴露端口
 
 - 服务部署在k8s集群当中，服务pod
 
