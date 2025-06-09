@@ -44,7 +44,7 @@ public UserController {
 
 - Autowired 是 Spring 提供的注解，Resource 是 JDK 提供的注解
 - Autowired 默认是通过 bytype 类型注入，如果 UserService 有两个实现类，比如 CusUserService 和 LdapUserService，这样注入就会报错。
-- Resource 注解中有两个注解，分别是 name 和 type，
+- Resource 注解注入有两种方式，分别是 name 和 type，
   - 不指定，默认通过 byname 注入，找不到 name 然后使用 bytype 注入
   - 指定 name，根据 name 名称来注入
   - 指定 type，根据 type 类型注入
@@ -54,8 +54,8 @@ public UserController {
 
 ## 构造器注入
 
-- spring 官方推荐使用构造器注入，有这些优点：
+- Spring 官方推荐使用构造器注入，有这些优点：
 - 更清晰的依赖关系：构造器明确指出了类需要哪些依赖，代码一目了然，符合“依赖显式化”的设计原则。
-- 易于测试：单元测试时，可以直接通过构造器传入 mock 对象，无需使用 Spring 容器。
-- 更安全：避免出现空指针一场，构造器注入在实例创建时就完成了依赖注入，依赖不能为空（除非加了 `@Nullable`），不会出现使用时为 null 的情况。
+- 易于测试：单元测试时，可以直接通过构造器传入 Mock 对象，无需使用 Spring 容器。
+- 更安全：避免出现空指针异常，构造器注入在实例创建时就完成了依赖注入，依赖不能为空（除非加了 `@Nullable`），不会出现使用时为 null 的情况。
 - 支持 `final` 字段：构造器注入可以让依赖字段为 `final`，增强不可变性和线程安全。
