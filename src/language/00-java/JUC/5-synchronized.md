@@ -1,6 +1,6 @@
 # JUC-synchronized 
 ## 并发编程三个特性
-分别是；
+分别是：
 - 可见性
 - 原子性
 - 有序性
@@ -116,11 +116,17 @@ private static void runTest(Counter counter, int threadCount, java.util.function
 - 程序执行的代码按照代码的先后顺序执行，但是在实际运行中，为了优化性能，编译器、处理器或内存系统可能会对指令进行 重排序（Reordering），导致程序执行顺序与代码顺序不一致
 
 ## 使用 synchronized
-1、修饰实例方法 
-2、修饰静态方法
-3、修饰代码块
+
+用法：
+
+- 修饰实例方法 
+- 修饰静态方法
+- 修饰代码块
+
+分别介绍：
 
 1、修饰实例方法
+
 ```java
 public synchronized void incrementWithSynchronized() {
     for (int i = 0; i < iterations; i++) {
