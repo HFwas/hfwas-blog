@@ -32,6 +32,8 @@ macos 配置
 - [nvm](https://github.com/nvm-sh/nvm)
 - [maven](https://maven.apache.org/download.cgi)
 - [colima](https://github.com/abiosoft/colima)
+- [MySQL](https://myapollo.com.tw/blog/install-mysql-using-homebrew/)
+- [Redis](https://github.com/qishibo/AnotherRedisDesktopManager)
 
 会议软件
 
@@ -391,5 +393,23 @@ brewe install git
 
 ```bash
 brew install colima
+```
+
+### MySQL
+
+- 通过homebrew安装
+
+```
+# mysql  Ver 9.3.0 for macos15.2 on arm64 (Homebrew)
+brew install mysql
+```
+
+### Redis
+
+- 通过homebrew安装
+
+```
+# redis版本：8.0.1
+brew install redis 
 ```
 
