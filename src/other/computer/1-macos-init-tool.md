@@ -1,29 +1,46 @@
-# macos 初始化软件安装
+# macOS 初始化软件安装
 
-macos 配置
+## macOS 配置
 
-- 开启点击效果
-- 三指拖移
+### 开启点击效果
 
-代理软件
+![image-20250707173239441](./images/image-20250707173239441.png)
+
+### 三指拖移
+
+![image-20250707173210356](./images/image-20250707173210356.png)
+
+## 代理软件
 
 - [clashx](https://clashx.org/clashx-download/)
 
-浏览器软件
+## 浏览器软件
 
 - [谷歌浏览器](https://www.google.com/intl/zh-CN/chrome/)
 
-截图软件
+## 截图软件
 
 - [Snipaste](https://zh.snipaste.com/)
 
-聊天软件
+## 社交软件
 
 - [微信](https://weixin.qq.com/)
 - [钉钉](https://www.dingtalk.com/download?spm=a213l2.13146415.0.0.6ed23146B27ih7)
 - [飞书](https://www.feishu.cn/download)
 
-开发软件
+## 会议软件
+
+- [腾讯会议](https://meeting.tencent.com/download/)
+
+## 音乐软件
+
+- QQ[音乐](https://y.qq.com/download/download.html)
+
+## 笔记软件
+
+- [typora](https://typora.io/)
+
+## 开发软件
 
 - jetbrains全家桶（IntelliJ IDEA，WebStorm，DataGrip，GoLand）[toolbox](https://www.jetbrains.com/toolbox-app/)
 - [vscode](https://code.visualstudio.com/docs/?dv=osx)
@@ -34,30 +51,6 @@ macos 配置
 - [colima](https://github.com/abiosoft/colima)
 - [MySQL](https://myapollo.com.tw/blog/install-mysql-using-homebrew/)
 - [Redis](https://github.com/qishibo/AnotherRedisDesktopManager)
-
-会议软件
-
-- [腾讯会议](https://meeting.tencent.com/download/)
-
-音乐软件
-
-- QQ[音乐](https://y.qq.com/download/download.html)
-
-笔记软件
-
-- [typora](https://typora.io/)
-
-## macos 配置
-
-### 开启点击效果
-
-![image-20250707173239441](./images/image-20250707173239441.png)
-
-### 三指拖移
-
-![image-20250707173210356](./images/image-20250707173210356.png)
-
-## 开发软件
 
 ### homebrew
 

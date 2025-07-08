@@ -35,6 +35,15 @@ export const other = arraySidebar([
         ],
     },
     {
+        text: "电脑初始化",
+        icon: "/computer-solid.svg",
+        prefix: "computer/",
+        collapsible: false,
+        children: [
+            "1-macos-init-tool.md",
+        ],
+    },
+    {
         text: "工具",
         icon: "/toolbox-solid.svg",
         link: "tools/overriew.md",
