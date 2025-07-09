@@ -51,6 +51,7 @@
 - [colima](https://github.com/abiosoft/colima)
 - [MySQL](https://myapollo.com.tw/blog/install-mysql-using-homebrew/)
 - [Redis](https://github.com/qishibo/AnotherRedisDesktopManager)
+- JDK
 
 ### homebrew
 
@@ -406,3 +407,8 @@ brew install mysql
 brew install redis 
 ```
 
+### JDK
+
+- idea当中可以下载不同版本jdk，可以省略自己手动下载的过程，如下：
+
+![image-20250709220518762](./images/image-20250709220518762.png)

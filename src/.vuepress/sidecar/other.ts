@@ -41,6 +41,7 @@ export const other = arraySidebar([
         collapsible: false,
         children: [
             "1-macos-init-tool.md",
+            "2-windows-init-tool.md"
         ],
     },
     {
