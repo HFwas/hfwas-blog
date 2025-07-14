@@ -11,7 +11,8 @@ export const dev = arraySidebar([
             "2-performance-optimization.md",
             "3-config-ssh-clone.md",
             "4-mapstruct.md",
-            "5-idea-integration-asprof.md"
+            "5-idea-integration-asprof.md",
+            "7-config-access-token-clone.md"
         ],
     },
     {
