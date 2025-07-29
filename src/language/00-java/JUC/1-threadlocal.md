@@ -34,12 +34,13 @@ public class Thread implements Runnable {
     ThreadLocal.ThreadLocalMap threadLocals = null;
 }
 ```
-- 从代码可以看到，每个线程维护了自己的 ThreadLocal.ThreadLocalMap threadLocals 变量。
-- 从 ThreadLocal 当中获取数据，本质上是以当前线程作为 key 从 ThreadLocalMap 获取 ThreadLocalMap.Entry 对象，说明 value 存储的是 Entry
+- 从代码可以看到，每个线程维护了自己的 `ThreadLocal.ThreadLocalMap threadLocals` 变量。
+- 从 ThreadLocal 当中获取数据，本质上是以当前线程作为 key 从 ThreadLocalMap 获取 `ThreadLocalMap.Entry` 对象，说明 value 存储的是 Entry
 
 ## ThreadLocal.set方法
 ThreadLocal.set 方法获取当前线程，以当前线程作为 key，从 ThreadLocalMap 获取，如果 ThreadLocalMap 存在就 set 值，如果 ThreadLocalMap 不存在就创建
 代码如下：
+
 ```java
 public void set(T value) {
     Thread t = Thread.currentThread();
