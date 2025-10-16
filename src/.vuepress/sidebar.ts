@@ -31,6 +31,13 @@ export default sidebar({
       children: "structure",
     },
     {
+      text: "生活",
+      icon: "pngtree-ecolife.png",
+      prefix: "life/",
+      link: "life/",
+      children: "structure",
+    },
+    {
       text: "其他",
       icon: "laptop-code",
       prefix: "other/",
