@@ -34,7 +34,7 @@ export default sidebar({
       text: "生活",
       icon: "pngtree-ecolife.png",
       prefix: "life/",
-      link: "life/",
+      link: "life/on-foot/README.md",
       children: "structure",
     },
     {

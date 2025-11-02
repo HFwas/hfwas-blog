@@ -5,5 +5,5 @@ export default navbar([
   { text: "开发相关", icon: "/icons8-开发人员-50.png", link: "/dev/" },
   { text: "语言知识", icon: "/icons8-语言-50.png", link: "/language/" },
   { text: "其他", icon: "/yin-yang-solid.svg", link: "/other/" },
-  { text: "生活", icon: "/pngtree-ecolife.png", link: "/life/" },
+  { text: "生活", icon: "/pngtree-ecolife.png", link: "/life/on-foot/" },
 ]);

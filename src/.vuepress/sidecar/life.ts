@@ -7,6 +7,7 @@ export const life = arraySidebar([
         prefix: "on-foot/",
         collapsible: true,
         children: [
+            'README.md',
             "20251012-sanfeng.md",
         ],
     },
