@@ -13,7 +13,6 @@ export const dev = arraySidebar([
             "4-mapstruct.md",
             "5-idea-integration-asprof.md",
             "7-config-access-token-clone.md",
-            "9-mac-upgrade-bash.md",
         ],
     },
     {
