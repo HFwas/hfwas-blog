@@ -118,6 +118,7 @@ export const devops = arraySidebar([
         collapsible: true,
         children: [
             "000-Jenkins-deploy.md",
+            "101-jenkins-https-domain.md",
             "0001-jenkins-plugin.md",
             "002-jenkins-shard-library.md",
             "003-jenkins-agent.md",
