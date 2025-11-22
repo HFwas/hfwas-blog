@@ -170,5 +170,15 @@ export const devops = arraySidebar([
         children: [
             "00-enable-bin-log.md",
         ],
+    },
+    {
+        text: "镜像仓库",
+        icon: "/registry.png",
+        prefix: "14-registry/",
+        collapsible: true,
+        children: [
+            "1-registry.md",
+            "2-registry-https-domain.md",
+        ],
     }
 ]);
