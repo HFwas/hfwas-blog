@@ -5,7 +5,7 @@ tag:
   - inotify
 ---
 
-# linux命令-inotify命令
+# Linux-inotify命令
 
 ## 基本介绍
 

@@ -14,12 +14,13 @@ category:
 
 ## 组件类
 
+- 镜像管理：Harbor，Registry
 - 代码管理：Gitlab，Gitee
-- 依赖管理和制品管理：Nexus
+- 制品管理：Nexus
 - CI/CD：Jenkins，Github Action
 - 部署管理：Docker，K8s
 - 代码质量：Sonarqube
-- 定时任务：XXL-JOB
+- 定时任务：Xxl-Job
 - Webide：coder-server
 
 在Devops模块当中，你可以收获本人关于Devops的实践经验，希望能对大家有所帮助：
