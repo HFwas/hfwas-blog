@@ -7,11 +7,12 @@ export const devops = arraySidebar([
         prefix: "00-linux/",
         collapsible: true,
         children: [
-            "20231220-用户登录被锁定.md",
+            "1-linux-ssh-key.md",
+            "2-big-file-split.md",
+            "3-inotify.md",
+            "4-unlock-user-login.md",
             "20231220-登录之后默认进去目录.md",
-            "20231223-ssh基于key验证.md",
             "20231223-修改sudo配置.md",
-            "20240415-inotify命令.md",
             "signal.md",
         ],
     },{

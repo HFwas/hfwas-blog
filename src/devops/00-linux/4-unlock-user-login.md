@@ -4,7 +4,7 @@ category:
 tag:
   - shell
 ---
-# Linux操作-用户登录被锁定
+# Linux-用户登录被锁定
 
 - 查看用户登录失败次数，执行`pam_tally2`
 - 解锁指定用户，执行`pam_tally2 -r -u test1`
