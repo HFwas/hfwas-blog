@@ -22,10 +22,14 @@ docker:
   - 0.0.0.0/0
 # 分配一个可访问的 IP 地址
 netwrok:
-  address: true  
+  address: true
+  
+env:
+  http_proxy: http://192.168.5.2:7890
+  https_proxy: http://192.168.5.2:7890
 ```
 
-- 启动colima,执行`colima start`,
+- 启动colima,执行`colima start`
 - 查看启动的colima实例信息，执行`colima ls`
 
 ## 代理
