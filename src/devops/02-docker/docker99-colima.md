@@ -20,10 +20,13 @@
 docker:
   insecure-registries:
   - 0.0.0.0/0
+  features:  # ⚠️ 必须嵌套在 docker 键下
+    containerd-snapshotter: false
 # 分配一个可访问的 IP 地址
 netwrok:
   address: true
-  
+
+# 添加代理
 env:
   http_proxy: http://192.168.5.2:7890
   https_proxy: http://192.168.5.2:7890
