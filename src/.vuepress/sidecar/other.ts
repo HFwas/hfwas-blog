@@ -27,11 +27,11 @@ export const other = arraySidebar([
         prefix: "softerware/",
         collapsible: false,
         children: [
-            "20220329-内网安装docker环境.md",
-            "20220821-外网安装docker.md",
-            "20220828-linux命令自动补全.md",
-            "20220828-linux安装git.md",
-            "20240311-xshell和xftp.md",
+            "20220329-install-docker-intranet-environment.md",
+            "20220821-install-docker-internet.md",
+            "20220828-linux-command-auto-completion.md",
+            "20220828-linux-install-git.md",
+            "20240311-xshell-and-xftp.md",
         ],
     },
     {
